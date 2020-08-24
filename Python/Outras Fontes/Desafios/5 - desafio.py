@@ -3,5 +3,5 @@
 n1 = int(input('Digite um número inteiro: '))
 s = n1+1
 a = n1-1
-print(f'Então seu sucessor é {s} e seu antecessor é {a}. ')
+print(f'Logo, seu sucessor é {s} e seu antecessor é {a}. ')
 #print(f'Logo, seu sucessor é {n1+1} e seu antecessor é {n1-1}. ')
