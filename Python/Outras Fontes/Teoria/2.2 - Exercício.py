@@ -4,8 +4,6 @@ n2 = int(input('Digite outro número: '))
 s12 = n1+n2
 print('A soma entre',n1,'e',n2,'vale:',s12)
 
-print('-------------------------------------------------- ')
-
 print('Modo 2')
 n3 = int(input('Digite um número: '))
 n4 = int(input('Digite outro número: '))
