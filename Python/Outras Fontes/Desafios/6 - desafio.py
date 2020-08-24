@@ -1,0 +1,1 @@
+#Desafio 006: Crie um algoritmo que mostre o seu dobro, triplo e raiz quadrada.

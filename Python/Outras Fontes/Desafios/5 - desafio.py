@@ -1,1 +1,1 @@
-#Desafio 005: 
+#Desafio 005: Faça um programa que leia um número inteiro e mostre o seu antecessor e seu sucessor.
