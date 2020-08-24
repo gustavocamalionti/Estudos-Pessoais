@@ -1,9 +1,9 @@
 n = input('Digita algo ai, fazendo favor: ') 
-print(f'O tipo primitivo dele é:{type(n)}'
-print('É um número?:{n.isnumeric()}'
-print('É uma palavra ou letra?: {n.isalpha()}' 
-print('Possui só letras minúsculas?', n.islower())
-print('Possui só letras maiúsculas?', n.isupper())
-print('Seria um número alfanumérico?', n.isalnum())
-print('só existe espaços?', n.isspace())
-print('Ela está capitalizada?', n.istitle())
+print(f'O tipo primitivo dele é: {type(n)}')
+print(f'É um número?: {n.isnumeric()}')
+print(f'É uma palavra ou letra?: {n.isalpha()}') 
+print(f'Possui só letras minúsculas? {n.islower()}')
+print(f'Possui só letras maiúsculas? {n.isupper()}')
+print(f'Seria um número alfanumérico? {n.isalnum()}')
+print(f'só existe espaços? {n.isspace()}')
+print(f'Ela está capitalizada? {n.istitle()}')
