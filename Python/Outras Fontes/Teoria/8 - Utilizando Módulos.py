@@ -11,3 +11,4 @@ print(f'A raiz de {n} é {sqrt(n):.3f}. ')
 
 #Importando uma biblioteca da comunidade
 import emoji
+
