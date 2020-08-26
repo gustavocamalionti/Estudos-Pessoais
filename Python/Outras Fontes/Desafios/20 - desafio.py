@@ -8,7 +8,7 @@ c = str(input('Digite o nome do terceiro representante: '))
 d = str(input('Digite o nome do Quarto representante:'))
 
 lista = [a, b, c, d]
-emb = random.sample(lista, 4)
+emb = random.sample(lista, 3)
 
 
 print(f'A sequência de apresentação dos grupos será: {emb}')
