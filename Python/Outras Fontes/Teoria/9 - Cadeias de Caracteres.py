@@ -33,8 +33,8 @@ print(frase.lower()) #Mantém os caracteres que estão em m e transforma o resto
 print(frase.capitalize()) #Primeiro algarismo em Maiúsculo e o resto em minúsculo. 
 print(frase.title()) #Todas as palavras começam com letra maiúsculas. 
 print(frase.strip()) #Remove espaços desnecessarios da direita e esquerda. 
-print(frase.rstrip()) #remove espaços desnecessários da direita. 
-print(frase.lstrip()) #remove espaços desnecessários da esquerda. 
+print(frase2.rstrip()) #remove espaços desnecessários da direita. 
+print(frase2.lstrip()) #remove espaços desnecessários da esquerda. 
 
 #DIVISÃO
 d = 'DIVISÃO'
