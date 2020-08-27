@@ -28,8 +28,8 @@ print('Curso' in frase) #Curso está na frase? True.
 n = 'TRANSFORMAÇÃO'
 print(f'{n:-^90}')
 print(frase.replace('Python', 'Android')) #Substitui Python por Android
-print(frase.upper()) #Mantém os caracteres que estão em M e transforma o resto em m.
-print(frase.lower()) #Mantém os caracteres que estão em m e transforma o resto em M.
+print(frase.upper()) #Mantém os caracteres que estão em M e transforma o resto em M.
+print(frase.lower()) #Mantém os caracteres que estão em m e transforma o resto em m.
 print(frase.capitalize()) #Primeiro algarismo em Maiúsculo e o resto em minúsculo. 
 print(frase.title()) #Todas as palavras começam com letra maiúsculas. 
 print(frase.strip()) #Remove espaços desnecessarios da direita e esquerda. 
@@ -41,7 +41,7 @@ d = 'DIVISÃO'
 dividido = frase.split()
 print(f'{d:-^90}')
 print(frase.split()) #Divide cada palavra em um novo agrupamento de caracteres.
-print(dividido) #novo objeto com o objeto 'frase' dividida, split aplicada.
+print(dividido) #novo objeto com 'frase' dividida, split aplicada.
 print(dividido[0]) #novos agrupamentos, mostrar o '0'. 
 print(dividido[2]) #novos agrupamentos, mostrar o '2'.
 print(dividido[2][3]) #novos agrupamentos, mostrar o '2' com o '3' caracter.
