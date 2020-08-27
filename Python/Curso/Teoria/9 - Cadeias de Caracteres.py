@@ -44,7 +44,7 @@ print(frase.split()) #Divide cada palavra em um novo agrupamento de caracteres.
 print(dividido) #novo objeto com 'frase' dividida, split aplicada.
 print(dividido[0]) #novos agrupamentos, mostrar o '0'. 
 print(dividido[2]) #novos agrupamentos, mostrar o '2'.
-print(dividido[2][3]) #novos agrupamentos, mostrar o '2' com o '3' caracter.
+print(dividido[2][3]) #novos agrupamentos, mostrar o '2' com o '3°' caracter.
 
 #JUNÇÃO
 j = 'JUNÇÃO'
