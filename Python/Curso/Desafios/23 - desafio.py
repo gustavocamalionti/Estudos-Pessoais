@@ -5,6 +5,8 @@
 #centena: 8 
 #milhar: 1
 
+num = str(input('Digite um número de 0 a 9999: ')).strip()
+num2 = (f'{num:0>4}')
 
 print('Analisando...')
 print(f'Unidade: {num2[3]} ')
