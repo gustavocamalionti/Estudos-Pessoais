@@ -6,6 +6,8 @@
 #milhar: 1
 
 
-n = str(input('Digite um número entre 0 a 9999:'))
-
-print(f'unidade: {n[3]:}')
+print('Analisando...')
+print(f'Unidade: {num2[3]} ')
+print(f'Dezena: {num2[2]} ')
+print(f'Centena: {num2[1]} ')
+print(f' Milhar: {num2[0]} ')
