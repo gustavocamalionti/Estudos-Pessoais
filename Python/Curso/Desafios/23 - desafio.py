@@ -4,3 +4,8 @@
 #dezena: 3 
 #centena: 8 
 #milhar: 1
+
+
+n = str(input('Digite um número entre 0 a 9999:'))
+
+print(f'unidade: {n[3]:}')
