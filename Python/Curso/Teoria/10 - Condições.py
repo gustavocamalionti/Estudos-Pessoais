@@ -12,6 +12,12 @@ print(f'Bom dia {nome}!')
 cd = 'CONDIÇÃO COMPOSTA'
 print(f'{cd:-^40}')
 
+nome = str(input('Qual o seu nome: '))
+if nome == 'Gustavo':
+    print('Que nome bonito. ')
+else:
+    print('Que nome Feio! hahaah brincadeira.')
+print(f'Bom dia {nome}! ')
 
 #Cálculo de Média: CONDICIONAL
 med = 'CONDICIONAL:CÁLCULO DE MÉDIA'
