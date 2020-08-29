@@ -1,34 +1,42 @@
-print('\033[0:30:45mOlá, Mundo!\033[m')
+import colorama #O WINDOWS N SUPORTA A SEQUÊNCIA (ANSI).
+colorama.init()
 
-cores = {    #cores normais
+#EXEMPLOS:
+print('\033[33;41mHello World!\033[m ')
+print('\033[31;43mHello World!\033[m ')
+print('\033[30;47mHello World!\033[m ')
+print('\033[37;40mHello World!\033[m ')
 
-         'vermelho':'\033[31m',
-         'azul':'\033[34m',
-         'amarelo':'\033[33m',
-         'branco':'\033[30m',
-         'roxo':'\033[35m',
-         'verde':'\033[32m',
-         'ciano':'\033[36m',
-         'limpa':'\033[m',
-         'preto e branco':'\033[7;30;m',
+print('-=-'*20)
+a = 3
+b = 5
+print(f'O valor digitado é \033[31m{a}\033[m e \033[32m{b}\033[m!!!')
+nome = 'Gustavo'
+print(f'Muito prazer em te conhecer, \033[30;47m{nome}!!!\033[m ')
+print('-=-'*20)
 
-                #cores em negrito
+#CASO 1: DICIONÁRIO
+nome = 'Gustavo'
+cores = { "limpa":"\033[m",
+          "vermelha":"\033[31m",
+          "verde":"\033[32m",
+          "pretoebranco":"\033[30;47m"}
+print(f'Muito prazer em te conhecer, {cores["vermelha"]}{nome}{cores["limpa"]}. ')
+print(f'Muito prazer em te conhecer, {cores["pretoebranco"]}{nome}{cores["limpa"]}')
 
-         'vermelho em negrito':'\033[1;31m',
-         'azul em negrito':'\033[1;34m' ,
-         'amarelo em negrito':'\033[1;33m' ,
-         'branco em negrito':'\033[1;30m',
-         'roxo em negrito':'\033[1;35m',
-         'verde em negrito':'\033[1;32m',
-         'ciano em negrito':'\033[1;36m',
-
-               #cores sublinhadas
-
-         'vermelho sublinhado':'\033[4;31m',
-         'azul sublinhado':'\033[4;34m',
-         'amarelo sublinhado':'\033[4;33m',
-         'branco sublinhado':'\033[4;30m',
-         'roxo sublinhado':'\033[4;35m',
-         'verde sublinhado':'\033[4;32m',
-         'ciano sublinhado':'\033[4;36m'
-         }
+#CASOS PECULIARES
+      #FOREGROUND(LETRA)/BACKGROUND(FUNDO):
+'\033[30;40m'      # black/black
+'\033[31;40m'      # red/red
+'\033[32;40m'     # green/green
+'\033[33;40m'     # yellow/yellow
+'\033[34;44m'    # blue/blue
+'\033[35;45m'     # magenta/magenta
+'\033[36;46m'      # cyan/cyan
+'\033[37;47m'      # white/white
+'\033[39;48m'      # reset/reset
+     
+ # CORES E BRILHOS
+'\033[1m'       # bright
+'\033[2m'       # dim (looks same as normal brightness)
+'\033[22m'      # normal brightness
