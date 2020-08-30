@@ -8,3 +8,6 @@ elif nome in 'Ana Julia Janaina Patrícia Joanna':
 else:
     print('Seu nome é bem normal.')
 print(f'Tenha um bom dia, {nome}! ')
+
+#DIFERENÇA ENTRE if e else
+#mostre se um número é 
