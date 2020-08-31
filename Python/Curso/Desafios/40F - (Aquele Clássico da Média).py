@@ -19,3 +19,20 @@ if media >= 5 and media < 7: #7>media>=5
     print(f'\033[37;44mRECUPERAÇÃO!\033[m Sua média foi de \033[34m{media}\033[m.')
 if media >= 7: #else: também funcionaria!
     print(f'\033[37;42mAPROVADO!\033[m Sua média foi de \033[32m{media}\033[m.')
+
+
+
+
+a = float(input('Nota na P1: '))
+b = float(input('Nota na P2: '))
+
+#CALCULO DAS MÉDIAS
+media = (a+b)/2
+if 0 <= media < 5: 
+    print(f'\033[37;41mREPROVADO!\033[m Sua média foi de \033[31m{media}\033[m. ')
+elif media >= 5 and media < 7: #7>media>=5
+    print(f'\033[37;44mRECUPERAÇÃO!\033[m Sua média foi de \033[34m{media}\033[m.')
+elif 10 >= media >= 7: #else: também funcionaria!
+    print(f'\033[37;42mAPROVADO!\033[m Sua média foi de \033[32m{media}\033[m.')
+else:
+    print(f'Média = \033[31m{media:.2f}\033[m. Essa média não existe, confira os valores de P1 e P2.')
