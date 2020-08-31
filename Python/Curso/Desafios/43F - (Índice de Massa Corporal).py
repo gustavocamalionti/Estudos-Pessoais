@@ -11,12 +11,12 @@ imc = peso/((altura)*2)
 
 print(f'Com {peso:.2f}kg e tendo {altura:.2f}m, seu IMC é de {imc:.2f}. Portanto, você está ', end ='')
 if imc<18.5:
-    print('ABAIXO DO PESO.')
+    print('\033[37;41mABAIXO DO PESO\033[m.')
 elif 18.5<=imc<25:
-    print('com o PESO IDEAL.')
+    print('com o \033[37;42mPESO IDEAL\033[m.')
 elif 25<=imc<30:
-    print('com SOBREPESO.')
+    print('com \033[37;45mSOBREPESO\033[m.')
 elif 30<=imc<40:
-    print('com OBESIDADE.')
+    print('com \033[37;47mOBESIDADE\033[m.')
 else:
-    print('com OBESIDADE MÓRBIDA.')
+    print('com \033[37;41mOBESIDADE MÓRBIDA\033[m.')
