@@ -41,4 +41,4 @@ if jog == escolhapc[0]:
 elif (jog == 'PEDRA' and escolhapc[0] == 'TESOURA') or (jog == 'TESOURA' and escolhapc[0] == 'PAPEL') or (jog == 'PAPEL' and escolhapc[0] == 'PEDRA'):
     print('\033[32mVENCEU!\033[m')
 else:
-    print('\033[31mDERROTA!\03[m')
+    print('\033[31mDERROTA!\033[m')
