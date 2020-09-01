@@ -1,4 +1,4 @@
-#RESOLUÇÃO DO PROFESSOR:
+#RESOLUÇÃO DO PROFESSOR/LEONARDO:
 from time import sleep
 import random
 print('''Escolha uma opção:
@@ -8,7 +8,9 @@ print('''Escolha uma opção:
 print('-=-'*30)
 
 jog = int(input('Qual é a sua jogada? '))
-
+if jog<0 or jog>2:
+    print('COMANDO INVÁLIDO, TENTE NOVAMENTE')
+    exit()
 sleep(0.5)
 print('PEDRA...')
 sleep(1)
