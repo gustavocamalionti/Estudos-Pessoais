@@ -7,16 +7,14 @@
 #ex: anotaram a data da maratona
 
 frase = str(input('Digite uma frase ou nome qualquer: ')).strip().upper()
-lista = frase.split()
-junto =''.join(lista)
+junto =''.join(frase)
 inverso = ''
-
 
 for c in range(len(junto) -1, -1, -1):
     inverso = inverso + junto[c]
 print(inverso)
-print(f' O inverso de {junto} é {inverso}.')
+print(f'O inverso de {junto} é {inverso}. ')
 if inverso == junto:
-    print(f' É uma palavra/frase Políndroma.')
+    print(f'{junto} É uma palavra/frase/nome Políndroma. ')
 else:
-    print(f'Não é Políndroma')
+    print(f'{junto} Não é uma palavra/frase/nome Políndroma.')
