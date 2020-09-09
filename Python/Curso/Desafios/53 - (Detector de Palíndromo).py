@@ -7,7 +7,8 @@
 #ex: anotaram a data da maratona
 
 frase = str(input('Digite uma frase ou nome qualquer: ')).strip().upper()
-junto =''.join(frase)
+palavra = frase.split()
+junto =''.join(palavra)
 inverso = ''
 
 for c in range(len(junto) -1, -1, -1):
