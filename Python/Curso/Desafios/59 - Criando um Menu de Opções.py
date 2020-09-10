@@ -31,6 +31,8 @@ while num != 5:
             maior=n1
         if n2>n1:
             maior=n2
+        if n2==n1:
+            maior=n1
         print(f'Entre \033[31m{n1}\033[m e \033[31m{n2}\033[m, o maior número vale \033[32m{maior}\033[m ')
         print('-'*35)
         time.sleep(1)
