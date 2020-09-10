@@ -28,3 +28,16 @@ print(f'{num}! = {factorial(num)}')
 
 met3 = 'MÉTODO 3: USANDO [for]'
 print(f'{met3:-^55}')
+
+num = int(input('Digite um número para calcular seu fatorial: '))
+
+f = 1
+print(f'{num}! = ', end='')
+for c in range(num, 0, -1):
+    f = f*c
+    print(c, end='')
+    if c!=1:
+        print('x', end='')
+    else:
+        print('=', end='')
+print(f)
