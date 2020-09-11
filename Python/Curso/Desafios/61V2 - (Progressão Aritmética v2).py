@@ -11,3 +11,4 @@ while cont <= 10:
     termo = termo + razao
     cont = cont + 1
 print('FIM')
+
