@@ -7,4 +7,4 @@ while True:
         break 
     quant = quant + 1
     soma = soma + n
-print(f'Obrigado, você forneceu {quant} número e a soma entre eles vale {soma}')
+print(f'Obrigado, você forneceu {quant} números e a soma entre eles vale {soma}')
