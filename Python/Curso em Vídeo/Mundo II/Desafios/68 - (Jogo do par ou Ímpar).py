@@ -31,7 +31,7 @@ while True:
             print('\033[31mVOCÊ PERDEU!!!\033[m ')
             break
     elif soma%2!=0:
-        if escolha == 'I':
+        if escolha == 'I' or escolha == 'Í':
             print(f'Você escolheu {jogador} e disse \033[32mÍMPAR\033[m → Computador escolheu {máquina}. Total de {soma} \n{soma} É \033[32mÍMPAR\033[m')
             print('\033[32mVOCÊ VENCEU!!!\033[m ')
             print('Vamos jogar novamente...')
