@@ -18,8 +18,32 @@ print(f'último valor: {num}')
 num.pop(3) #Remove um valor específico
 print(f'valor específico: {num}')
 
-num.insert(2, 11) #na posiçaõ destacada '2' insere um novo termo '11'
+num.insert(3, 2) #na posiçaõ destacada '3' insere um novo termo '2'
 print(f'Insere na posição 2 o valor 11: {num}')
 
+num.remove(5) #Remove um termo específico '5'
+print(f'Remove o termo específico: {num}')
 
 print(f'Essa lista tem {len(num)} Elementos') #Contador de elementos
+
+#EXEMPLOS PRÁTICOS
+if 5 in num:
+    num.remove(5)
+else:
+    print('Nãao achei o 5')
+
+valores = [] 
+valores.append(5)
+valores.append(9)
+valores.append(4)
+print(valores)
+
+for c, v in enumerate(valores):
+    print(f'Na posição {c} encontrei o valor {v} ')
+print('Cheguei ao final da lista!.')
+
+valores2 = [] 
+
+for cont in range(0,5):
+    valores2.append(int(input('Digite um valor: ')))
+print(valores2)
