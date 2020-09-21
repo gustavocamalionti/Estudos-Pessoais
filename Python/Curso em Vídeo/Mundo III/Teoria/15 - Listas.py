@@ -47,3 +47,10 @@ valores2 = []
 for cont in range(0,5):
     valores2.append(int(input('Digite um valor: ')))
 print(valores2)
+
+a = [2, 3, 4, 7]
+b = a[:]
+b[2] = 8
+
+print(f'{a}')
+print(f'{b}')
