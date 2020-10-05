@@ -21,5 +21,3 @@ print('-'*31)
 #SEGUNDA RESOLUÇÃO
 for c in range(0, len(prodprice), 2):
     print(f'{prodprice[c]:.<21}R$ {prodprice[c+1]:>7.2f}')
-    
-        
