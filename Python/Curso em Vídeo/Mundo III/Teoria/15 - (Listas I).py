@@ -19,7 +19,7 @@ num.pop(3) #Remove um valor específico
 print(f'valor específico: {num}')
 
 num.insert(3, 2) #na posiçaõ destacada '3' insere um novo termo '2'
-print(f'Insere na posição 2 o valor 11: {num}')
+print(f'Insere na posição 3 o valor 2: {num}')
 
 num.remove(5) #Remove um termo específico '5'
 print(f'Remove o termo específico: {num}')

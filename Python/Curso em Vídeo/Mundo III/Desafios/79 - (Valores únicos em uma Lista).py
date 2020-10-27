@@ -1,23 +1,7 @@
 #Desafio 079: Crie um programa onde o usuário possa digitar vários valores numéricos e cadastre-os em uma lista. Caso o número já exista lá dentro, ele nõa será adicionado. No final, serão exibidos todos os valores únicos digitados, em ordem crescente.
 
-#Resolução Pessoal II:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Resolução Pessoal
+#RESOLUÇÃO PESSOAL
 ee = ''
-quest = '0'
 lista = []
 while True:
     n = int(input('Digite um número: '))
@@ -35,3 +19,21 @@ while True:
         print('Digite um valor válido! \033[32mS!\033[m ou \033[31mN\033[m')
 lista.sort()
 print(f' {lista}')
+
+#RESOLUÇÃO DO PROFESSOR
+numeros = list()
+
+while True:
+    n = int(input('Digite um número: '))
+    if n not in numeros:
+        numeros.append(n)
+        print('Número adicionado com Sucesso!')
+    else:
+        print('Valor duplicado! Não vou adicionar... ')
+
+    r = str(input('Quer continuar? [S/N] ')).upper()
+    if r in 'N':
+        break
+
+numeros.sort()
+print(numeros)
