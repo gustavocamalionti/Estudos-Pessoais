@@ -8,13 +8,30 @@ for c in range(0,5):
     if c==0 or n>numeros[-1]:
         numeros.append(n)
         print(f'O valor {n} foi adicionado no final da lista')
+
     else:
         pos = 0
-        while pos <= len(numeros):
+        while pos < len(numeros):
             if n <= numeros[pos]:
                 numeros.insert(pos, n)
                 print(f'O valor {n} foi adicionado na posição {pos}')
                 break
-            pos = pos + 1
+            else:
+                pos = pos + 1
         
 print(numeros)
+
+#RESOLUÇÃO DE UM AMIGO: REVISAR.
+lista = list()
+for c in range(5):
+    n = int(input("Digite o numero: "))
+    if c == 0 or n > lista[-1]:
+        lista.append(n)
+    else:
+        for pos, x in enumerate(lista):
+            if n <= x:
+                lista.insert(pos, n)
+                break
+print(lista)
+
+#RESOLUÇÃO PESSOAL - PRIMEIRA TENTATIVA
