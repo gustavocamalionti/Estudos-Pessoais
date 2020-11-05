@@ -13,7 +13,7 @@ for c,v in enumerate(numeros):
     if v == max(numeros):
         print(c, end = '...')
 
-print(f'O menor valor vale {min(numeros)} e está nas posições ', end = '')
+print(f' O menor valor vale {min(numeros)} e está nas posições ', end = '')
 for c,v in enumerate(numeros):
     if v == min(numeros):
         print(c, end = '...')
