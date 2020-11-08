@@ -22,3 +22,5 @@ lista.sort(reverse=True)
 print(f'Foram digitados {cont} números')
 print(f'O valor 5 apareceu {cont5} vezes')
 print(lista)
+
+#RESOLUÇÃO PESSOAL: MANEIRA MAIS DIFICIL SEM USAR SORT >>>>>>>>>>> TREINO DE CÓDIGO
