@@ -16,7 +16,7 @@ while True:
     if quest == 'N':
         break
 
-print(lista)
-print(impares)
-print(pares)
+print(f'Conjunto com os valores: {lista}')
+print(f'Subconjunto com os valores impares: {impares}')
+print(f'Subconjunto com os valores pares: {pares}')
 

@@ -49,7 +49,7 @@ for cont in range(0,5):
 print(valores2)
 
 a = [2, 3, 4, 7]
-b = a[:]
+b = a[:] #FATIAMENTO, B não é exatamente A, na verdade B está recebendo todos os valores de A. Portanto a[:] é um comando de cópia
 b[2] = 8
 
 print(f'{a}')

@@ -33,5 +33,3 @@ for c in range(5):
                 lista.insert(pos, n)
                 break
 print(lista)
-
-#RESOLUÇÃO PESSOAL - PRIMEIRA TENTATIVA
