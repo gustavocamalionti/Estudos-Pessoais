@@ -3,6 +3,7 @@
 # B) A soma dos valores da terceira coluna. 
 # C) O maior valor da segunda linha
 
+#RESOLUÇÃO PESSOAL
 soma_pares = 0
 soma_coluna = 0
 maior_segunda_linha = []
