@@ -1,6 +1,17 @@
 #Desafio 85: Crie um programa onde o usuário possa digitar sete valores numéricos e cadastre-os em uma lista única que mantenha separados os valores pares e ímpares. No final, mostre os valores pares e ímpares em ordem crescente. 
 
 #MODO FÁCIL - RESOLUÇÃO PESSOAL: USANDO O COMANDO SORTED
+valores_paridade = [[],[]]
+
+for c in range(1,8):
+    valor = int(input(f'Digite o {c}° número: '))
+    if valor%2==0:
+        valores_paridade[0].append(valor)
+    else:
+        valores_paridade[1].append(valor)
+
+print(f'Valores pares: {sorted(valores_paridade[0])} ')
+print(f'Valores Impares: {sorted(valores_paridade[1])} ')
 
 #MODO DIFICIL - RESOLUÇÃO PESSOAL: SEM USAR O COMANDO SORTED 
 valores_paridade = [[], []]
@@ -23,7 +34,7 @@ for c in range(1, 8):
                 pos += 1
     
     else:
-        if len(valores_paridade[1]) == 0: #adicionar o primeiro valor Impar
+        if len(valores_paridade[1]) == 0: #adicionar o primeiro valor par
             valores_paridade[1].append(valor)
 
         elif valor>max(valores_paridade[1]): #Adicionar o maior valor impar
@@ -38,6 +49,6 @@ for c in range(1, 8):
                 pos += 1
 
 print(f'Os valores pares digitados foram: {valores_paridade[0]} ')
-print(f'Os valores impares digitados foram: {valores_paridade[1]}')
+print(f'Os valores impares digitados foram: {valores_paridade[1]} ')
 
 
