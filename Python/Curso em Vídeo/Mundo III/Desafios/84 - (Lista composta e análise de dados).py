@@ -4,20 +4,24 @@
 # C) Uma listagem com as pessoas mais leves.
 
 #RESOLUÇÃO PESSOAL
-
 dados = []
 pessoas_grupo = []
 pessoas_peso = [[], []]
 menu_resposta = ''
 peso_maior = peso_menor = 0
 contagem_pessoas = 0
-import time 
+
 
 while True: 
     nome_usuario = str(input('Digite seu nome: ')).upper().strip()
     dados.append(nome_usuario)
     peso_usuario = float(input('Digite seu peso: '))
-    if contagem_pessoas == 0:
+    dados.append(peso_usuario)
+    pessoas_grupo.append(dados[:])
+    dados.clear()
+    contagem_pessoas = contagem_pessoas + 1
+
+    if contagem_pessoas == 1:
         peso_maior = peso_menor = peso_usuario
     else:
         if peso_usuario > peso_maior:
@@ -25,10 +29,6 @@ while True:
         elif peso_usuario < peso_menor:
             peso_menor = peso_usuario
             
-    dados.append(peso_usuario)
-    pessoas_grupo.append(dados[:])
-    contagem_pessoas = contagem_pessoas + 1
-    dados.clear()
 
     menu_resposta = str(input('Quer continuar? [S/N] ')).upper().strip()
     while menu_resposta not in 'SN':
@@ -38,16 +38,29 @@ while True:
     if menu_resposta == 'N':
         break
     
-    for c in range(0, len(pessoas_grupo)):
-        print(c)
+for c in range(0, len(pessoas_grupo)):
+    if pessoas_grupo[c][1] > peso_maior:
+        pessoas_peso[0].clear()
+        pessoas_peso[0].append(pessoas_grupo[c])
+        
+    elif pessoas_grupo[c][1] == peso_maior:
+        pessoas_peso[0].append(pessoas_grupo[c])
+            
+    elif pessoas_grupo[c][1] < peso_menor:
+        pessoas_peso[1].clear()
+        pessoas_peso[1].append(pessoas_grupo[c])
+        
+    elif pessoas_grupo[c][1] == peso_menor:
+        pessoas_peso[1].append(pessoas_grupo[c])
 
+print(f'Foi adicionado \033[32m{contagem_pessoas}\033[m usuários no sistema.')
+print('As pessoas mais leves são:')
+for c in range(0,len(pessoas_peso[1])):
+    print(pessoas_peso[1][c][0], end='...')
 
-
-print(peso_maior)
-print(peso_menor)
-print(pessoas_grupo)
-print(contagem_pessoas)
-print(pessoas_peso)
+print('\nAs pessoas mais pesadas são:')
+for c in range(0,len(pessoas_peso[0])):
+    print(pessoas_peso[0][c][0], end='...')
 
 
 
