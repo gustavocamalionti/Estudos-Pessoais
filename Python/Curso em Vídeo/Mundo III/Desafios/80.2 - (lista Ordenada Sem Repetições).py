@@ -1,7 +1,6 @@
-#Desafio 080: Crie um programa onde o usuário possa digitar cinco valores numéricos e cadastre-os em uma lista, já na posição correta de inserção (sem usar o sort()). No final, mostre a lista ordenada na tela.
+#Desafio 080: Crie um programa onde o usuário possa digitar cinco valores numéricos e cadastre-os em uma lista, já na posição correta de inserção (sem usar o sorted()). No final, mostre a lista ordenada na tela.
 
 #RESOLUÇÃO PESSOAL : TERCEIRA TENTATIVA - Entendimento de 75% do exercício
-pos = 0
 lista_numeros = []
 
 for valor in range(1,6):
@@ -16,12 +15,14 @@ for valor in range(1,6):
         print(f'{numeros} foi adicionado no final da lista')
     
     else:
+        pos = 0
         while pos < len(lista_numeros):
             if numeros <= lista_numeros[pos]:
                 lista_numeros.insert(pos, numeros)
                 print(f' O {numeros} foi adicionado na lista')
                 break
             pos=pos+1
+            print(pos)
             
 print(lista_numeros)
 
