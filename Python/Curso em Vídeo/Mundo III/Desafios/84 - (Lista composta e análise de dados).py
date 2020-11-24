@@ -4,33 +4,35 @@
 # C) Uma listagem com as pessoas mais leves.
 
 #RESOLUÇÃO PESSOAL
+
 dados = []
-grupo_pessoas = []
-pesos_lista = [[], []]
-cont=0
-contagem_pessoas = 0
-maior=menor=0
+pessoas_grupo = []
+menu_resposta = ''
 
-while True:
-    nome = str(input('Nome: ')).strip()
-    dados.append(nome)
+import time 
 
-    peso = float(input('Peso: '))
-    dados.append(peso)
-
-    contagem_pessoas = contagem_pessoas + 1
-    grupo_pessoas.append(dados[:])
+while True: 
+    nome_usuario = str(input('Digite seu nome: '))
+    dados.append(nome_usuario)
+    peso_usuario = float(input('Digite seu peso: '))
+    dados.append(peso_usuario)
+    pessoas_grupo.append(dados[:])
     dados.clear()
 
-    parar_programa = str(input('Deseja parar? [S/N] ')).upper()
-    if parar_programa == 'S':
+    menu_resposta = str(input('Quer continuar? [S/N]')).upper().strip()
+    while menu_resposta not in 'SN':
+        print('Resposta Inválida,',end='')
+        menu_resposta = str(input(' Tente novamente. Quer continuar? [S/N]')).upper().strip()
+
+    if menu_resposta == 'N':
         break
+    
 
-for c in range(0,len(grupo_pessoas)):
-    if grupo_pessoas[c][1] >= maior:
-        pesos_lista[0].append(grupo_pessoas[c])
-    elif grupo_pessoas[c][1] <= menor:
-        pesos_lista[1].append(grupo_pessoas[c])
+    
 
-print(f'{grupo_pessoas}')
-print(f'{pesos_lista}')
+print('teste')
+
+
+
+
+
