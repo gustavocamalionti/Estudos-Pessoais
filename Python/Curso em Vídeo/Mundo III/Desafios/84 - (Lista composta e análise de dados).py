@@ -54,22 +54,21 @@ for c in range(0, len(pessoas_grupo)):
         pessoas_peso[1].append(pessoas_grupo[c])
 
 print(f'Foi adicionado \033[32m{contagem_pessoas}\033[m usuários no sistema.')
-print('As pessoas mais leves são:')
+print('As pessoas mais leves são: ', end='')
 for c in range(0,len(pessoas_peso[1])):
     print(pessoas_peso[1][c][0], end='...')
 
-print('\nAs pessoas mais pesadas são:')
+print('\nAs pessoas mais pesadas são: ', end='')
 for c in range(0,len(pessoas_peso[0])):
     print(pessoas_peso[0][c][0], end='...')
 
 #RESOLUÇÃO PROFESSOR:
 print('\n', '-=-'*25)
+
 dados = []
 pessoas_grupo = []
-pessoas_peso = [[], []]
 menu_resposta = ''
 peso_maior = peso_menor = 0
-contagem_pessoas = 0
 
 while True: 
     dados.append(str(input('Digite seu nome: ')).upper().strip())
