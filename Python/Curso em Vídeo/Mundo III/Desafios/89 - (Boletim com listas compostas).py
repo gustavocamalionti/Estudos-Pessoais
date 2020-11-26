@@ -6,12 +6,9 @@ lista_notas_alunos = []
 
 while True:
     nome = str(input('Digite um nome: ')).strip().upper()
-    dados.append(nome)
     nota_1 = float(input('Nota da P1: '))
-    dados.append(nota_1)
     nota_2 = float(input('Nota da P2: '))
-    dados.append(nota_2)
-    lista_notas_alunos.append(dados[:])
+    lista_notas_alunos.append([nome, nota_1, nota_2])
     dados.clear()
 
     continuar_questao = str(input('Quer continuar? [S/N] ')).strip().upper()
@@ -28,7 +25,7 @@ print('-'*30)
 print(f'{"N":<2}{"NOME":<25}{"MÉDIA":<3}') 
 
 for c in range(0, len(lista_notas_alunos)):
-    print(f'{c:<2}{lista_notas_alunos[c][0]:<25}{((lista_notas_alunos[c][1]+lista_notas_alunos[c][2])/2):<3}')
+    print(f'{c:<2}{lista_notas_alunos[c][0]:<25}{((lista_notas_alunos[c][1]+lista_notas_alunos[c][2])/2):<3.1f}')
 
 while True:
     mostrar_notas = int(input('Mostrar notas de qual aluno? (999 para interromper) '))
@@ -36,14 +33,14 @@ while True:
         if mostrar_notas == c:
             print(f'As notas de {lista_notas_alunos[c][0]} na P1 e P2 foram, respectivamente: ', end='')
             if lista_notas_alunos[c][1]>=5:
-                print(f'\033[32m{lista_notas_alunos[c][1]}\033[m ', end='e ') 
+                print(f'\033[32m{lista_notas_alunos[c][1]:.1f}\033[m ', end='e ') 
             else:
-                print(f'\033[31m{lista_notas_alunos[c][1]}\033[m ', end='e ')
+                print(f'\033[31m{lista_notas_alunos[c][1]:.1f}\033[m ', end='e ')
             
             if lista_notas_alunos[c][2]>=5:
-                print(f'\033[32m{lista_notas_alunos[c][2]}\033[m.')
+                print(f'\033[32m{lista_notas_alunos[c][2]:.1f}\033[m.')
             else:
-                print(f'\033[31m{lista_notas_alunos[c][2]}\033[m.')
+                print(f'\033[31m{lista_notas_alunos[c][2]:.1f}\033[m.')
     if mostrar_notas == 999:
         print('Fechando programa, obrigado!')
         break
