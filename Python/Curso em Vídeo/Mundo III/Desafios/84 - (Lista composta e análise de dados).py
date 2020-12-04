@@ -102,4 +102,3 @@ print(f'\nO menor peso foi de {peso_menor}. Peso de ', end='')
 for p in pessoas_grupo:
     if p[1] == peso_menor:
         print(f'{p[0]}', end='...')
-
