@@ -1,6 +1,5 @@
 #Desafio 90: Faça um programa que leia nome e média de um aluno, guardando também a situação em um dicionário. No final, mostre o conteúdo da estrutura na tela.
 
-<<<<<<< Updated upstream
 #RESOLUÇÃO PESSOAL
 aluno = {}
 aluno['nome'] = str(input('Nome: ')).upper()
@@ -17,13 +16,3 @@ else:
 
 for k,v in aluno.items():
     print(f'{k} é igual a {v}')
-=======
-dicionario = ['nome':'', 'media':'', 'situacao':'',]
-if 5<=dicionario['media']<7:
-    print()
-
-    
-
-
-
->>>>>>> Stashed changes
