@@ -20,7 +20,7 @@ while True:
     soma_pessoas = soma_pessoas + 1
 
     continuar = str(input('Quer continuar? [S/N] ')).strip().upper()
-    while continuar not in 'S/N':
+    while continuar not in 'SN':
         continuar = str(input('Resposta incorreta! Quer continuar? [S/N] ')).strip().upper()
     if continuar == 'N':
         break
