@@ -3,11 +3,11 @@
 
 def área(a, b):
     area = a*b
-    print(f'A área vale {area} m².')
+    print(f'A área de um terreno {largura:.1f}x{comprimento:.1f} vale {area:.1f} m²')
     
 
 #Programa Principal
-largura = float(input('Digite a Largura: '))
-comprimento = float(input('Digite o comprimento: '))
+largura = float(input('Digite a Largura (m): '))
+comprimento = float(input('Digite o comprimento (m): '))
 
 área(largura, comprimento)
