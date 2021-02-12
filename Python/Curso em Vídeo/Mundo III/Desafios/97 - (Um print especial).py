@@ -13,3 +13,4 @@ def escreva(msg):
 msg = str(input(f'Escreva qualquer coisa: '))
 
 escreva(msg)
+escreva('Aluno: Gustavo')
