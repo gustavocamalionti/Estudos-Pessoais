@@ -32,3 +32,5 @@ if m >= 6.0:
     print(f' Parabéns, você foi APROVADO! ')
 else:
     print(f'Estude mais, você foi REPROVADO! ')
+
+g = 'Gustavo'
