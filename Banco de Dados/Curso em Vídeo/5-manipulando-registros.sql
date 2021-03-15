@@ -13,8 +13,8 @@ insert into cursos values
 (default, 'Jarva', 'Introdução a Linguagem Java', '10', '29', '2000'),
 (default,'MySQL', 'Banco de Dados MySQL', '30', '15', '2016'),
 (default, 'Word', 'Curso completo de Word', '40', '30', '2016'),
-(default, 'Sapateado', 'Danças Rítmicas', '40', '30', '2016'),
-(default, 'Cozinha Árabe', 'Aprenda a fazer Kibe', '40', '30', '2016'),
+(default, 'Sapateado', 'Danças Rítmicas', '40', '30', '2018'),
+(default, 'Cozinha Árabe', 'Aprenda a fazer Kibe', '40', '30', '2018'),
 (default, 'Youtuber', 'Gerar polêmica e ganhar inscritos', '5', '2', '2018');
 
 select*from cursos;
@@ -40,4 +40,16 @@ update cursos
 set ano = 2050, carga = '800'
 where ano = '2018';
 
+/*Deletando uma linha específica*/
+delete from cursos
+where idcurso = '8';
+
+/*Deletando várias linhas*/
+/*Caso esteja dando  erro para deletar varias linhas de uma vez, segue edit-preferences-sqleditor-safeupdate (desmarcar)*/
+delete from cursos
+where ano = '2050'
+limit 2;
+
+truncate table cursos;
 select*from cursos;
+describe cursos;
