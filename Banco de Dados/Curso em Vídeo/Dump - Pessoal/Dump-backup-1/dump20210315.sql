@@ -31,7 +31,7 @@ CREATE TABLE `cursos` (
   `ano` year DEFAULT '2021',
   PRIMARY KEY (`idcurso`),
   UNIQUE KEY `nome` (`nome`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +62,7 @@ CREATE TABLE `gafanhotos` (
   `altura` decimal(3,2) DEFAULT NULL,
   `nacionalidade` varchar(20) DEFAULT 'Brasil',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
