@@ -48,7 +48,7 @@ order by carga asc;
 /*Funções de Agregação - Selecionar ou Totalizar alguma coisa*/
 select count(*) from cursos;
 
-select count(*)from cursos 
+select count(*) from cursos 
 where carga > 40;
 
 select max(carga) from cursos;
