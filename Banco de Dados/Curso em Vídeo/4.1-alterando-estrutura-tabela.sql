@@ -12,6 +12,11 @@ drop column profissao;
 alter table pessoas
 add column profissao varchar(10) after nome;
 
+/*Alterando a posição de um campo já criado*/
+alter table pessoas
+modify column profissao varchar(10) 
+after nome;
+
 alter table pessoas
 add codigo int first; 
 
