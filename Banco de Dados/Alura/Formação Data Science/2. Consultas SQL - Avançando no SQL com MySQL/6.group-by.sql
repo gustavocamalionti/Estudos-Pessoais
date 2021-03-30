@@ -28,3 +28,4 @@ select codigo_do_produto, count(quantidade) from itens_notas_fiscais
 where codigo_do_produto = '1101035' and quantidade = (select max(quantidade) from itens_notas_fiscais)
 group by codigo_do_produto;
 
+
