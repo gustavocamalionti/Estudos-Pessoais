@@ -1,3 +1,5 @@
+use sucos_vendas;
+
 select curdate() as resultado;
 select current_time() as resultado;
 select current_timestamp() as resultado;
@@ -13,6 +15,7 @@ select distinct data_venda,
 dayname(data_venda) as DIA, monthname(data_venda) as MES, year(data_venda) as ANO 
 from notas_fiscais;
 
-select * from tabela_de_clientes;
 /*Crie uma consulta que mostre o nome e a idade atual dos clientes.*/
-select nome, datediff(year(current_timestamp()), year(data_de_nascimento)) from tabela_de_clientes;
+select nome, timestampdiff(year, data_de_nascimento, curdate()) as idade from tabela_de_clientes;
+
+
