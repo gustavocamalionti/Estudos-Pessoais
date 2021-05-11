@@ -4,8 +4,13 @@ body {
     background-color: blanchedalmond;
 }
 
+#banner {
+    width: 100%;
+}
+
 h1 {
-    color:cadetblue
+    color:cadetblue;
+    text-align: center;
 }
 
 p {
@@ -14,6 +19,10 @@ p {
 
 strong {
     color: rebeccapurple;
+}
+
+#missao {
+    font-size: 20px
 }
 
 em strong{

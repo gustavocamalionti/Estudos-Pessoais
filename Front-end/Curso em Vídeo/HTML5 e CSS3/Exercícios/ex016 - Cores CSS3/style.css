@@ -2,11 +2,11 @@
 
 * {
     font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
+
 }
 
 body {
-    background-image: linear-gradient(to bottom, #F2EBBF, #8CBEB2);
+    background-image: linear-gradient(to right, #F2EBBF, #8CBEB2);
 }
 
 main {
@@ -21,7 +21,7 @@ main {
 h1 {
     color:#F06060;
     text-align: center;
-    text-shadow: 1px 1px 2px #9c3e3e8c;
+    text-shadow: 1px 1px 2px #3817178c;
 }
 
 h2 {
