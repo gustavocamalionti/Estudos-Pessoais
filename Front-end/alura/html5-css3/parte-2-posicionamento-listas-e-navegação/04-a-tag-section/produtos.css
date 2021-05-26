@@ -5,8 +5,7 @@ header {
 
 .caixa {
 	position: relative;
-	width: 940px;
-	margin: 0 auto;
+	margin: 0 7%;
 }
 
 nav {
@@ -28,9 +27,9 @@ nav a {
 	text-decoration: none;
 }
 
+
 .produtos {
-	width: 940px;
-	margin: 0 auto;
+	margin: 0 7%;
 	padding: 50px 0;
 }
 
