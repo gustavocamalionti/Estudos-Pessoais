@@ -46,17 +46,17 @@ body {
     padding: 15px;
 }
 
-    .imagembeneficios {
-        width: 50%;
-    }
+.imagembeneficios {
+    width: 50%;
+}
 
-    ul {
-        display: inline-block;
-        vertical-align: top;
-        width: 20%;
-        margin-right: 15%;
-    }
+ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    margin-right: 15%;
+}
 
-    img {
-        display: inline-block;
-    }
+img {
+    display: inline-block;
+}
