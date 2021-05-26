@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 header {
     cursor:pointer;
 }
@@ -16,6 +22,8 @@ body {
     z-index: 3;
     left: 50%;
     transform: translateX(-50%);
+
+    margin-top: 25px;
     margin-bottom: 50px;
 }
 
@@ -37,6 +45,10 @@ body {
     background-color: rgba(0, 0, 0, 0.486);
     border: 5px solid rgb(37, 36, 36);
     display: inline-block;
+
+    
+    margin-right: 30px;
+    margin-left: 15px;
 }
 
 .conteudo {
