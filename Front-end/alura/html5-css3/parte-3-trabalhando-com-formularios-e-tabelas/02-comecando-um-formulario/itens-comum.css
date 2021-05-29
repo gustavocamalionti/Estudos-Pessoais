@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/*CABEÇALHO*/
+header {
+	background: #BBBBBB;
+	padding: 20px 0;
+}
+
+.caixa {
+	position: relative;
+	margin: 0 7%;
+}
+
+nav {
+	position: absolute;
+	top: 110px;
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+nav ul {
+    width: 100%;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+
+
+/*RODAPÉ*/
+footer {
+	text-align: center;
+	background: url("/Front-end/alura/html5-css3/parte-3-trabalhando-com-formularios-e-tabelas/imagens/produto/bg.jpg");
+	padding: 40px 0;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+/*BUTTOM - CHAT*/
+#chat {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    font-size: 70px;
+    border-radius: 15px;
+    background-color: rgb(94, 95, 97);
+    margin: 1% 1%;
+}
+
+#chat:active {
+    border-width: 5px;
+    border-color: #BBBBBB;
+}
+
+#chat:hover {
+    background-color: rgb(100, 148, 28);
+}

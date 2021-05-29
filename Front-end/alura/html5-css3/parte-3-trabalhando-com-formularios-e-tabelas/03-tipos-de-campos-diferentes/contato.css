@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+main {
+    margin: 0 7%;
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label, form p {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.input-padrao {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-bottom:15px;
+}
