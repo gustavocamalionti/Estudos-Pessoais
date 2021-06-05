@@ -85,6 +85,7 @@ for a in range(0, len(trocas_processamento)):
                             for h in range(len(banco_cartas)):
                                 if banco_cartas[h][0] == trocas_processamento[a][0]:
                                     banco_cartas[h][1] = int(banco_cartas[h][1]) + 1
+                                    print(banco_cartas)
                                     print('TROCA REALIZADA 1')
                                     break
                             break
@@ -138,6 +139,7 @@ for a in range(0, len(trocas_processamento)):
                                     banco_cartas[g][1] = int(banco_cartas[g][1]) - 1
                                     processamento = trocas_processamento[a][0] + ' 1'
                                     banco_cartas.append(processamento.split())
+                                    print(banco_cartas)
                                     print('TROCA REALIZADA 5')
                                     break
                             break    
@@ -150,24 +152,24 @@ for a in range(0, len(trocas_processamento)):
                                     banco_cartas[u][1] = int(banco_cartas[u][1]) - 1
                                     processamento = trocas_processamento[a][0] + ' 1'
                                     banco_cartas.append(processamento.split())
+                                    print(banco_cartas)
                                     print('TROCA REALIZADA 6')
                                     break
 
                                 if int(banco_cartas[u][1]) <= int(desejadas_cartas[g][1]):
-                                    if banco_cartas[u][0] == trocas_processamento[a][1] and int(banco_cartas[g][1]) > 0:
-                                        banco_cartas[u][1] = int(banco_cartas[u][1]) - 1
-                                        processamento = trocas_processamento[a][0] + ' 1'
-                                        banco_cartas.append(processamento.split())
-                                        print('TROCA REALIZADA 7')
-                                        break
-                                print('TROCA NÃO REALIZADA 8')
-                                break
+                                    print(banco_cartas)
+                                    print('TROCA NÃO REALIZADA 9')
+                                    break
+
+                                
+
+
                         break            
             
 
         
         else:
-            print('TROCA NÃO REALIZADA 8')
+            print('TROCA NÃO REALIZADA 9')
             break
 
 
