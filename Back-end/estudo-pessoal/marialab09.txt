@@ -82,16 +82,16 @@ for a in range(0, len(trocas_processamento)):
                     #PARA REALIZAR
                     for g in range(len(banco_cartas)):
                         if banco_cartas[g][0] == trocas_processamento[a][1] and int(banco_cartas[g][1]) == 0:
-                            
-                            print('TROCA NÃO REALIZADA!')
+                            print(f'{banco_cartas}')
+                            print('TROCA NÃO REALIZADA! 1')
 
                         if banco_cartas[g][0] == trocas_processamento[a][1] and int(banco_cartas[g][1]) > 0 and contem_desejada_perde == False:
                             banco_cartas[g][1] = int(banco_cartas[g][1]) - 1
                             for h in range(len(banco_cartas)):
                                 if banco_cartas[h][0] == trocas_processamento[a][0]:
                                     banco_cartas[h][1] = int(banco_cartas[h][1]) + 1
-                                    
-                                    print('TROCA REALIZADA!')
+                                    print(f'{banco_cartas}')
+                                    print('TROCA REALIZADA! 2')
                                     break
                             break
                         
@@ -103,8 +103,8 @@ for a in range(0, len(trocas_processamento)):
                                     for t in range(len(banco_cartas)):
                                         if banco_cartas[t][0] == trocas_processamento[a][0]:
                                             banco_cartas[t][1] = int(banco_cartas[t][1]) + 1
-                                         
-                                            print('TROCA REALIZADA!')
+                                            print(f'{banco_cartas}')
+                                            print('TROCA REALIZADA! 3')
                                             break
                                     break
                             
@@ -117,8 +117,8 @@ for a in range(0, len(trocas_processamento)):
                                     for h in range(len(banco_cartas)):
                                         if banco_cartas[h][0] == trocas_processamento[a][0]:
                                             banco_cartas[g][1] = int(banco_cartas[g][1]) + 1
-                                       
-                                            print('TROCA NÃO REALIZADA!')
+                                            print(f'{banco_cartas}')
+                                            print('TROCA NÃO REALIZADA! 4')
                                             break
                                     break
                                         
@@ -129,8 +129,8 @@ for a in range(0, len(trocas_processamento)):
                     #PARA NÃO REALIZAR
                     for g in range(len(banco_cartas)):
                         if banco_cartas[g][0] == trocas_processamento[a][1] and int(banco_cartas[g][1]) < 0:
-                      
-                            print('TROCA NÃO REALIZADA!')
+                            print(f'{banco_cartas}')
+                            print('TROCA NÃO REALIZADA! 5')
                             break
                     break
                             
@@ -139,26 +139,27 @@ for a in range(0, len(trocas_processamento)):
             #COM APPEND
             elif contem_ganhada == False:
                 if contem_desejada_perde == False: 
+                    print('conte_desejada_perde? {contem_desejada_perde}')
                     for g in range(len(banco_cartas)):
                         if banco_cartas[g][0] == trocas_processamento[a][1] and (int(banco_cartas[g][1]) == 0):
-                           
-                            print('TROCA NÃO REALIZADA!')
+                            print(f'{banco_cartas}')
+                            print('TROCA NÃO REALIZADA! 6')
                             break
 
                     for g in range(0, len(desejadas_cartas)):
                             for u in range(0, len(banco_cartas)):
                                 if desejadas_cartas[g][0] == trocas_processamento[a][1] and banco_cartas[u][0] == trocas_processamento[a][1]:
                                     if int(banco_cartas[u][1]) > 0 and int(banco_cartas[u][1]) <= int(desejadas_cartas[g][1]):
-                                     
-                                        print('TROCA NÃO REALIZADA!')
+                                        print(f'{banco_cartas}')
+                                        print('TROCA NÃO REALIZADA! 7')
                                         break
 
                                     if (int(banco_cartas[u][1]) > 0) and (int(banco_cartas[u][1]) > int(desejadas_cartas[g][1])):
                                         banco_cartas[u][1] = int(banco_cartas[u][1]) - 1
                                         processamento = trocas_processamento[a][0] + ' 1'
                                         banco_cartas.append(processamento.split())
-                                      
-                                        print('TROCA REALIZADA!')
+                                        print(f'{banco_cartas}')
+                                        print('TROCA REALIZADA! 8')
                                         break
                                 
                                 if (desejadas_cartas[g][0] != trocas_processamento[a][1]) and banco_cartas[u][0] == trocas_processamento[a][1]:
@@ -166,8 +167,8 @@ for a in range(0, len(trocas_processamento)):
                                         banco_cartas[u][1] = int(banco_cartas[u][1]) - 1
                                         processamento = trocas_processamento[a][0] + ' 1'
                                         banco_cartas.append(processamento.split())
-                              
-                                        print('TROCA REALIZADA!')
+                                        print(f'{banco_cartas}')
+                                        print('TROCA REALIZADA! 9')
                                         break
 
 
@@ -183,13 +184,13 @@ for a in range(0, len(trocas_processamento)):
                                     banco_cartas[u][1] = int(banco_cartas[u][1]) - 1
                                     processamento = trocas_processamento[a][0] + ' 1'
                                     banco_cartas.append(processamento.split())
-                               
-                                    print('TROCA REALIZADA!')
+                                    print(f'{banco_cartas}')
+                                    print('TROCA REALIZADA! 10')
                                     break
 
                                 if int(banco_cartas[u][1]) <= int(desejadas_cartas[g][1]):
-                                  
-                                    print('TROCA NÃO REALIZADA!')
+                                    print(f'{banco_cartas}')
+                                    print('TROCA NÃO REALIZADA! 11')
                                     break
                                 break
                         break            
@@ -197,8 +198,8 @@ for a in range(0, len(trocas_processamento)):
 
         
         else:
-           
-            print('TROCA NÃO REALIZADA!')
+            print(f'{banco_cartas}')
+            print('TROCA NÃO REALIZADA! 12')
             break
 
 
