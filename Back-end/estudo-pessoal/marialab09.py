@@ -9,7 +9,11 @@
 banco_cartas = list()
 desejadas_cartas = list()
 trocas_processamento = list()
-
+contem_desejada_perde = bool
+contem_desejada_ganha = bool
+validacao_desejada = bool
+validacao = bool
+contem_desejada = bool
 # Leitura das cartas para troca
 num_cartas = int(input())
 for c in range(0, num_cartas):
@@ -32,71 +36,142 @@ trocas_processamento.pop()
 
 # Processamento se as cartas desejadas foram obtidas
 
-for c in range(0, len(trocas_processamento)):
-    for z in range(0, len(banco_cartas)):
-        for t in range(0,len(desejadas_cartas)):
-            contem_carta = False
+for a in range(0, len(trocas_processamento)):
+    for b in range(0, len(banco_cartas)):
+        #INTELIGENCIA - ENCONTRANDO A CARTA PERDIDA 
+        for g in range(0, len(banco_cartas)):
+            contem_perdida = False
+            if banco_cartas[g][0] == trocas_processamento[a][1]:
+                contem_perdida = True
+                break
 
-            #TROCA REALIZADA
-            if (trocas_processamento[c][1] == banco_cartas[z][0]) and (int(banco_cartas[z][1]) > 0):
-                #CARTA PERDIDA
-                for t in range(0, len(desejadas_cartas)):
-                    if (banco_cartas[z][0] == desejadas_cartas[t][0]) and (int(banco_cartas[z][1]) <= int(desejadas_cartas[t][1])):
-                        print('1')
-                        print('TROCA NÃO REALIZADA')
+            else:
+                contem_perdida = False
+        
+        for g in range(0, len(banco_cartas)):
+            contem_ganhada = False
+            if banco_cartas[g][0] == trocas_processamento[a][0]:
+                contem_ganhada = True
+                break
 
-                    
-                    elif (banco_cartas[z][0] == desejadas_cartas[t][0]) and (int(banco_cartas[z][1]) > int(desejadas_cartas[t][1])):
-                        banco_cartas[z][1] = int(banco_cartas[z][1]) - 1
-                        for t in range(0, len(banco_cartas)):
-                            if trocas_processamento[c][0] == banco_cartas[t][0]:
-                                contem_carta = True
+            else:
+                contem_ganhada = False
+
+        for i in range(0, len(desejadas_cartas)):    
+            contem_desejada_ganha = False
+            if trocas_processamento[a][0] == desejadas_cartas[i][0] and banco_cartas[g][0] == trocas_processamento[a][0]:
+                contem_desejada_ganha = True
+                break
+
+            else:
+                contem_desejada_ganha = False 
+
+        for i in range(0, len(desejadas_cartas)):
+            contem_desejada_perde = False
+            if trocas_processamento[a][1] == desejadas_cartas[i][0] and banco_cartas[b][0] == trocas_processamento[a][1]:
+                contem_desejada_perde = True
+                break
+
+            else:
+                contem_desejada_perde = False 
+        
+        if contem_perdida == True:
+            #SEM APPEND 
+            if contem_ganhada == True:
+                    #PARA REALIZAR
+                    for g in range(len(banco_cartas)):
+                        if banco_cartas[g][0] == trocas_processamento[a][1] and int(banco_cartas[g][1]) >= 0 and contem_desejada_perde == False:
+                            banco_cartas[g][1] = int(banco_cartas[g][1]) - 1
+                            for h in range(len(banco_cartas)):
+                                if banco_cartas[h][0] == trocas_processamento[a][0]:
+                                    banco_cartas[h][1] = int(banco_cartas[h][1]) + 1
+                                    print('TROCA REALIZADA 1')
+                                    break
+                            break
                         
-                        if contem_carta == True:
-                            banco_cartas[t][1] = int(banco_cartas[t][1]) + 1
-                            print('2')
-                            print('TROCA REALIZADA')
-                        
-                        else:
-                            processamento2 = trocas_processamento[c][0] + ' 1' 
-                            banco_cartas.append(processamento2.split())
-                            print('3')
-                            print('TROCA REALIZADA')
-
-                        
-
-                    
-                    else:
-                        contem_carta = False
-                        banco_cartas[z][1] = int(banco_cartas[z][1]) - 1
-
-                        #CARTA GANHADA
-                        for t in range(0, len(banco_cartas)):
-                            if trocas_processamento[c][0] == banco_cartas[t][0]:
-                                contem_carta = True
+            
+                        if banco_cartas[g][0] == trocas_processamento[a][1] and int(banco_cartas[g][1]) >= 0 and contem_desejada_perde == True:
+                            for h in range(0, len(desejadas_cartas)):
+                                 if desejadas_cartas[h][0] == trocas_processamento[a][0] and int(desejadas_cartas[h][1]) < int(banco_cartas[g][1]):
+                                    banco_cartas[g][1] = int(banco_cartas[g][1]) - 1
+                                    for t in range(len(banco_cartas)):
+                                        if banco_cartas[t][0] == trocas_processamento[a][0]:
+                                            banco_cartas[t][1] = int(banco_cartas[t][1]) + 1
+                                            print('TROCA REALIZADA 2')
+                                            break
+                                    break
+                            
                                 
-                        
-                        if contem_carta == True:
-                            banco_cartas[t][1] = int(banco_cartas[t][1]) + 1
-                            print('4')
-                            print('TROCA REALIZADA')
-                        
-                        else:
-                            processamento2 = trocas_processamento[c][0] + ' 1' 
-                            banco_cartas.append(processamento2.split())
-                            print('5')
-                            print('TROCA REALIZADA')
 
+                        if banco_cartas[g][0] == trocas_processamento[a][1] and int(banco_cartas[g][1]) >= 0 and contem_desejada_perde == True:
+                            for h in range(0, len(desejadas_cartas)):
+                                 if desejadas_cartas[h][0] == trocas_processamento[a][0] and int(desejadas_cartas[h][1]) >= int(banco_cartas[g][1]):
+                                    banco_cartas[g][1] = int(banco_cartas[g][1]) - 1
+                                    for h in range(len(banco_cartas)):
+                                        if banco_cartas[h][0] == trocas_processamento[a][0]:
+                                            banco_cartas[g][1] = int(banco_cartas[g][1]) + 1
+                                            print('TROCA NÃO REALIZADA 3')
+                                            break
+                                    break
+                                        
+                            break
                         
+
+                                
+                    #PARA NÃO REALIZAR
+                    for g in range(len(banco_cartas)):
+                        if banco_cartas[g][0] == trocas_processamento[a][1] and int(banco_cartas[g][1]) < 0:
+                        
+                            print('TROCA NÃO REALIZADA 4')
+                            break
+                    break
+                            
+                
+
+            #COM APPEND
+            elif contem_ganhada == False:
+                if contem_desejada_perde == False: 
+                    for g in range(0, len(banco_cartas)):
+                        if trocas_processamento[a][1] == banco_cartas[g][0]:
+                            for u in range(0, len(banco_cartas)):
+                                if int(banco_cartas[u][1]) > 0:
+                                    banco_cartas[g][1] = int(banco_cartas[g][1]) - 1
+                                    processamento = trocas_processamento[a][0] + ' 1'
+                                    banco_cartas.append(processamento.split())
+                                    print('TROCA REALIZADA 5')
+                                    break
+                            break    
+                        break
+                if contem_desejada_perde == True:
+                    for g in range(0, len(desejadas_cartas)):
+                        if trocas_processamento[a][1] == desejadas_cartas[g][0]:
+                            for u in range(0, len(banco_cartas)):
+                                if int(banco_cartas[u][1]) > int(desejadas_cartas[g][1]):
+                                    banco_cartas[u][1] = int(banco_cartas[u][1]) - 1
+                                    processamento = trocas_processamento[a][0] + ' 1'
+                                    banco_cartas.append(processamento.split())
+                                    print('TROCA REALIZADA 6')
+                                    break
+
+                                if int(banco_cartas[u][1]) <= int(desejadas_cartas[g][1]):
+                                    if banco_cartas[u][0] == trocas_processamento[a][1] and int(banco_cartas[g][1]) > 0:
+                                        banco_cartas[u][1] = int(banco_cartas[u][1]) - 1
+                                        processamento = trocas_processamento[a][0] + ' 1'
+                                        banco_cartas.append(processamento.split())
+                                        print('TROCA REALIZADA 7')
+                                        break
+                                print('TROCA NÃO REALIZADA 8')
+                                break
+                        break            
             
-            #TROCA NÃO REALIZADA
-            elif (trocas_processamento[c][1] == banco_cartas[z][0]) and (int(banco_cartas[z][1]) <= 0):
-                print('6')
-                print('TROCA NÃO REALIZADA')
 
-            
-        #TROCA NÃO REALIZADA
+        
+        else:
+            print('TROCA NÃO REALIZADA 8')
+            break
 
-print(f'Cartas no banco: {banco_cartas}')
-print(f'Cartas desejadas: {desejadas_cartas}')
-print(trocas_processamento)
+
+
+
+print(f'COMBINAÇÃO {trocas_processamento[a]} ||| contem_ganhada: {contem_ganhada} >> contem_ perdida: {contem_perdida} ||| contem_desejada_ganha: {contem_desejada_ganha} ||| contem_desejada_perde {contem_desejada_perde}')
+print(banco_cartas)
