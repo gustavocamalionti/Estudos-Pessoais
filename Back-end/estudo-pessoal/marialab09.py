@@ -5,6 +5,17 @@
 # RA: 
 #####################################################
 
+#1
+#CARD01 4
+#1
+#CARD02 3
+#CARD02 CARD01
+#CARD02 CARD01
+#CARD03 CARD02
+#CARD02 CARD01
+#CARD02 CARD01
+#CARD03 CARD02
+#---
 
 banco_cartas = list()
 desejadas_cartas = list()
