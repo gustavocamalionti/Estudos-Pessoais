@@ -6,7 +6,7 @@
 ###################################################
 
 # Leitura da matriz
-
+validacao_sensores = []
 sensores = []
 campo = []
 for i in range(8):
@@ -21,26 +21,83 @@ for i in range(num_sensores):
   transformacao = str(input(''))
   sensores.append(transformacao.split())
   
+for a in range(0, len(sensores)):
+  while True:
+    #NORTE
+    for c in range(int(sensores[a][0]) -1, -1, -1):
+      print(c)
+      if campo[c][int(sensores[a][1])] == 'x':
+        transformacao = (f'{c} {sensores[a][1]}').split()
+        contem_sensor = False
+        for g in range(0, len(validacao_sensores)):
+          if validacao_sensores[g] == transformacao:
+            contem_sensor == True
+        
+        if contem_sensor == False:
+          print(f'{validacao_sensores} 1')
+          validacao_sensores.append(transformacao)
+
+      if campo[c][int(sensores[a][1])] == 'o':
+        break
 
 
-for sensor in range(0, len(sensores)):
-  for linha in range(0, len(campo)): 
-    for coluna in range(0, len(campo)):
+    #SUL
+    for c in range(int(sensores[a][0])+1, 8):
+      if campo[c][int(sensores[a][1])] == 'x':
+        transformacao = (f'{c} {sensores[a][1]}').split()
+        contem_sensor = False
+        for g in range(0, len(validacao_sensores)):
+          if validacao_sensores[g] == transformacao:
+            contem_sensor == True
+        
+        if contem_sensor == False:
+          print(sensores[a])
+          print(f'testando {c} {sensores[a][1]}')
+          print(f'{validacao_sensores} 2')
+          validacao_sensores.append(transformacao)
 
-      if sensores[sensor][linha] == campo[linha]:
-        print(sensores)
+      if campo[c][int(sensores[a][1])] == 'o':
+        break
+    
 
-#NORTE
+    #LESTE
+    for c in range(int(sensores[a][1])+1, 8):
+      if campo[int(sensores[a][0])][c] == 'x':
+        transformacao = (f'{sensores[a][0]} {c}').split()
+        contem_sensor = False
+        for g in range(0, len(validacao_sensores)):
+          if validacao_sensores[g] == transformacao:
+            contem_sensor == True
+        
+        if contem_sensor == False:
+          print(f'{validacao_sensores} 3')
+          validacao_sensores.append(transformacao)
 
+      if campo[int(sensores[a][0])][c] == 'o':
+        break
 
-#SUL
+    #OESTE
+    for c in range(int(sensores[a][1])-1, -1, -1):
+      if campo[int(sensores[a][0])][c] == 'x':
+        transformacao = (f'{sensores[a][0]} {c}').split()
+        contem_sensor = False
+        for g in range(0, len(validacao_sensores)):
+          if validacao_sensores[g] == transformacao:
+            contem_sensor == True
+        
+        if contem_sensor == False:
+          print(f'{validacao_sensores} 4')
+          validacao_sensores.append(transformacao)
 
+      if campo[int(sensores[a][0])][c] == 'o':
+        break
 
-#LESTE
+    break
 
+print(validacao_sensores)
+if len(validacao_sensores) == 0:
+  print('Nenhum bau encontrado.')
 
-#OESTE
-
-# Impressão da saída
-print(sensores)
+else:
+  print(f'{len(validacao_sensores)} bau(s) encontrado(s).')
 
