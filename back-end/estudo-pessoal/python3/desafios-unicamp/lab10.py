@@ -105,7 +105,6 @@ for a in range(0, len(sensores)):
         if contem_sensor == False:
           validacao_sensores.append(transformacao)
           
-
     break
 
 if len(validacao_sensores) == 0:
