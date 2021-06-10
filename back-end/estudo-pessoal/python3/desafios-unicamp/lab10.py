@@ -1,10 +1,4 @@
-###################################################
-# MC102 - Algoritmos e Programação de Computadores
-# Laboratório 10 - Caça ao Tesouro
-# Nome: 
-# RA: 
-###################################################
-
+#ENTRADAS
 #. . . . . . . .
 #. . . . . . . .
 #. . . x . . . .
