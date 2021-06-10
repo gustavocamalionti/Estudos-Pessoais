@@ -1,10 +1,4 @@
-#####################################################
-# MC102 - Algoritmos e Programação de Computadores
-# Laboratório 9 - Magic: Trocando Cartas
-# Nome: 
-# RA: 
-#####################################################
-
+#EXEMPLO DE ENTRADAS
 #1
 #CARD01 4
 #1

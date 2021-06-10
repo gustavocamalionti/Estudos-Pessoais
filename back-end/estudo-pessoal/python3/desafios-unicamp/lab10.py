@@ -1,4 +1,4 @@
-#ENTRADAS
+#EXEMPLO DE ENTRADAS
 #. . . . . . . .
 #. . . . . . . .
 #. . . x . . . .
