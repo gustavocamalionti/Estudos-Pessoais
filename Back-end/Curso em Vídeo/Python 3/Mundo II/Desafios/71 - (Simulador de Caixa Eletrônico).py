@@ -31,3 +31,5 @@ while True:
         totcéd = 0
 
 print('Volte sempre!!! Agradecemos a preferência.')
+
+
