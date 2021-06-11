@@ -33,7 +33,7 @@ for a in range(0, len(sensores)):
     cont = 0
     for c in range(int(sensores[a][0]) -1, -1, -1):
       cont = cont + 1
-      if campo[c][int(sensores[a][1])] == 'o' or cont > alcance:
+      if campo[c][int(sensores[a][1])] == 'o' or cont > alcance + 1:
         break
 
       if campo[c][int(sensores[a][1])] == 'x':
@@ -50,7 +50,7 @@ for a in range(0, len(sensores)):
     cont = 0
     for c in range(int(sensores[a][0]), 8):
       cont = cont + 1
-      if campo[c][int(sensores[a][1])] == 'o' or cont > alcance:
+      if campo[c][int(sensores[a][1])] == 'o' or cont > alcance + 1:
         break
 
       if campo[c][int(sensores[a][1])] == 'x':
@@ -70,7 +70,7 @@ for a in range(0, len(sensores)):
     cont = 0
     for c in range(int(sensores[a][1]), 8):
       cont = cont + 1
-      if campo[int(sensores[a][0])][c] == 'o' or cont > alcance:
+      if campo[int(sensores[a][0])][c] == 'o' or cont > alcance + 1:
         break
 
       if campo[int(sensores[a][0])][c] == 'x':
@@ -91,7 +91,7 @@ for a in range(0, len(sensores)):
     cont = 0
     for c in range(int(sensores[a][1]), -1, -1):
       cont = cont + 1
-      if campo[int(sensores[a][0])][c] == 'o' or cont > alcance:
+      if campo[int(sensores[a][0])][c] == 'o' or cont > alcance + 1:
         break
 
       if campo[int(sensores[a][0])][c] == 'x':
