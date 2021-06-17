@@ -31,7 +31,7 @@ for a in range(0, len(sensores)):
   while True:
     #NORTE
     cont = 0
-    for c in range(int(sensores[a][0]) -1, -1, -1):
+    for c in range(int(sensores[a][0]), -1, -1):
       cont = cont + 1
       if campo[c][int(sensores[a][1])] == 'o' or cont > alcance + 1:
         break
