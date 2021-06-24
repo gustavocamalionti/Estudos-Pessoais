@@ -1,11 +1,4 @@
-###################################################
-# MC102 - Algoritmos e Programação de Computadores
-# Laboratório 8 - O Desafio da Palavra Escondida
-# Nome: 
-# RA: 
-###################################################
-
-#INPUT
+#EXEMPLO DE ENTRADAS
 #8
 #Poeminho do contra
 

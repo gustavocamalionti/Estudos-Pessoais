@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://susy.ic.unicamp.br:9999/mc102multi/09/enunciado.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Laboratório 09</title>        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./Laboratório 09_files/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./Laboratório 09_files/github-markdown.css">
+    <style>
+        .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+        font-family: 'Noto Sans', sans-serif;
+        }
+        .markdown-body h6 { margin-bottom: 0; }
+        .markdown-body h6 + ul li {
+        display: inline-block;
+        width: 100%;
+        max-width: 426px;
+        vertical-align: top;
+        }
+        .markdown-body h6 + ul li pre {
+          max-height: 400px;
+        }
+    </style>
+<style type="text/css"></style></head>
+<body cz-shortcut-listen="true">
+    <article class="markdown-body">
+<h1>
+<a id="user-content-magic-trocando-cartas" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/09/enunciado.html#magic-trocando-cartas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Magic: Trocando Cartas</h1>
+<p>Infelizmente, por conta do orçamento limitado, João não conseguiu montar seu novo deck de Magic comprando boosters (<a href="https://susy.ic.unicamp.br:9999/mc102multi/04">Magic: The Gathering</a>). Entretanto, ainda é possível que ele consiga montar seu novo deck trocando algumas cartas com seus amigos. Dessa forma, João não precisa gastar dinheiro comprando boosters e terá a certeza de qual nova carta ele receberá depois de concluir a troca.</p>
+<p>A troca é feita sempre entre dois jogadores (uma carta por outra), sendo que ambos sabem quais cartas estão sendo trocadas. Pode ocorrer inclusive uma troca onde um jogador recebe uma carta que já possuia anteriormente, pois pode ser vantajoso possuir algumas cartas em maior quantidade visando trocas futuras. João possui uma lista de cartas que ele deseja trocar e suas respectivas quantidades. Além disso, ele também possui uma lista de cartas e suas respectivas quantidades mínimas que ele deseja obter depois de trocar algumas cartas. João pede sua ajuda novamente para agilizar o processo de contabilização das cartas desenvolvendo um programa para isso, sendo que da última vez sua ajuda foi fundamental.</p>
+<p>João irá fornecer inicialmente um número inteiro <strong>R</strong> indicando o número de cartas distintas que ele pretende trocar. Em seguinda, <strong>R</strong> linhas indicando o identificador da carta e sua respectiva quantidade, separados por um único caractere de espaço ' ', serão fornecidos. Exemplo do formato:</p>
+<pre><code>&lt;IDENTIFICADOR DA CARTA&gt; &lt;QUANTIDADE&gt;
+</code></pre>
+<p>Após fornecer a lista de cartas que pretende trocar, João irá fornecer a lista de carta que ele deseja obter e suas respectivas quantidades mínimas. Para isso, será fornecido um número inteiro <strong>D</strong>, indicando as cartas distintas desejadas por João. Em seguinda, <strong>D</strong> linhas indicando o identificador da carta e sua respectiva quantidade mínima, separados por um único caractere de espaço ' ', serão fornecidos. Exemplo do formato:</p>
+<pre><code>&lt;IDENTIFICADOR DA CARTA&gt; &lt;QUANTIDADE&gt;
+</code></pre>
+<p>Em seguida, João vai informar as propostas de trocar que ele recebeu. Para que João consiga concluir uma troca é necessário verificar se ele possui a carta desejada pelo outro jogador.  Cada proposta de troca é dada no seguinte formato (uma por linha):</p>
+<pre><code>&lt;IDENTIFICADOR DA CARTA QUE JOAO RECEBERÁ&gt; &lt;IDENTIFICADOR DA CARTA DESEJADA POR OUTRO JOGADOR&gt;
+</code></pre>
+<p>Seu programa deve verificar se a troca pode ser concluída ou não. Se sim, seu programa deve atualizar a lista de cartas e imprimir a seguinte mensagem:</p>
+<pre><code>TROCA REALIZADA!
+</code></pre>
+<p>Caso contrário, a seguinte mensagem deve ser exibida:</p>
+<pre><code>TROCA NAO REALIZADA!
+</code></pre>
+<p>Note que João só realizará uma troca se ele tiver cartas sufientes, ou seja, ele nunca realizará uma troca se ele precisar dar uma carta desejada que ele ainda não possui cartas extras em relação ao mínimo indicado. Para ajudar os seus colegas, João sempre realizará uma troca se tiver cartas extras suficientes, mesmo que ele não receba uma carta desejada.</p>
+<p>As trocas são finalizadas quando a seguinte linha for lida pelo seu programa:</p>
+<pre><code>---
+</code></pre>
+<p>Por fim, seu programa deve verificar se João conseguiu obter todas as cartas desejadas e suas respectivas quantidades mínimas. Em caso afirmativo, a seguinte mensagem deve ser impressa pelo seu programa:</p>
+<pre><code>JOAO CONSEGUIU AS CARTAS DESEJADAS!
+</code></pre>
+<p>Caso contrário, a seguinte mensagem deve ser impressa:</p>
+<pre><code>JOAO NAO CONSEGUIU AS CARTAS DESEJADAS!
+</code></pre>
+<p>Exemplos de entradas e saídas esperadas pelo seu programa:</p>
+<h3>
+<a id="user-content-teste-01" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/09/enunciado.html#teste-01" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 01</h3>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/09/dados/arq01.in">Entrada</a></p>
+<pre><code>1
+CARD01 4
+1
+CARD02 3
+CARD02 CARD01
+CARD02 CARD01
+CARD03 CARD02
+CARD02 CARD01
+CARD02 CARD01
+CARD03 CARD02
+---
+</code></pre>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/09/dados/arq01.out">Saída</a></p>
+<pre><code>TROCA REALIZADA!
+TROCA REALIZADA!
+TROCA NAO REALIZADA!
+TROCA REALIZADA!
+TROCA REALIZADA!
+TROCA REALIZADA!
+JOAO CONSEGUIU AS CARTAS DESEJADAS!
+</code></pre>
+<h3>
+<a id="user-content-teste-02" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/09/enunciado.html#teste-02" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 02</h3>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/09/dados/arq02.in">Entrada</a></p>
+<pre><code>5
+CARD13 1
+CARD15 1
+CARD16 1
+CARD06 1
+CARD07 2
+5
+CARD04 1
+CARD02 1
+CARD20 1
+CARD08 1
+CARD03 1
+CARD20 CARD07
+CARD20 CARD16
+CARD01 CARD19
+CARD04 CARD13
+CARD02 CARD07
+CARD04 CARD16
+CARD12 CARD16
+CARD04 CARD15
+CARD20 CARD16
+CARD04 CARD06
+CARD11 CARD16
+CARD08 CARD13
+CARD03 CARD06
+CARD03 CARD07
+CARD03 CARD07
+CARD20 CARD01
+CARD20 CARD04
+CARD03 CARD13
+CARD08 CARD06
+CARD19 CARD18
+---
+</code></pre>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/09/dados/arq02.out">Saída</a></p>
+<pre><code>TROCA REALIZADA!
+TROCA REALIZADA!
+TROCA NAO REALIZADA!
+TROCA REALIZADA!
+TROCA REALIZADA!
+TROCA NAO REALIZADA!
+TROCA NAO REALIZADA!
+TROCA REALIZADA!
+TROCA NAO REALIZADA!
+TROCA REALIZADA!
+TROCA NAO REALIZADA!
+TROCA NAO REALIZADA!
+TROCA NAO REALIZADA!
+TROCA NAO REALIZADA!
+TROCA NAO REALIZADA!
+TROCA NAO REALIZADA!
+TROCA REALIZADA!
+TROCA NAO REALIZADA!
+TROCA NAO REALIZADA!
+TROCA NAO REALIZADA!
+JOAO NAO CONSEGUIU AS CARTAS DESEJADAS!
+</code></pre>
+<h3>
+<a id="user-content-teste-03" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/09/enunciado.html#teste-03" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 03</h3>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/09/dados/arq03.in">Entrada</a></p>
+<pre><code>7
+CARD01 4
+CARD14 1
+CARD19 3
+CARD08 2
+CARD02 1
+CARD09 3
+CARD05 2
+3
+CARD07 4
+CARD18 1
+CARD16 1
+CARD16 CARD19
+CARD07 CARD09
+CARD07 CARD14
+CARD07 CARD02
+CARD16 CARD14
+CARD08 CARD09
+CARD07 CARD05
+CARD12 CARD16
+CARD18 CARD08
+CARD09 CARD04
+CARD15 CARD11
+CARD17 CARD20
+CARD10 CARD15
+CARD15 CARD08
+CARD16 CARD01
+CARD18 CARD05
+CARD01 CARD10
+CARD18 CARD08
+CARD06 CARD14
+---
+</code></pre>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/09/dados/arq03.out">Saída</a></p>
+<pre><code>TROCA REALIZADA!
+TROCA REALIZADA!
+TROCA REALIZADA!
+TROCA REALIZADA!
+TROCA NAO REALIZADA!
+TROCA REALIZADA!
+TROCA REALIZADA!
+TROCA NAO REALIZADA!
+TROCA REALIZADA!
+TROCA NAO REALIZADA!
+TROCA NAO REALIZADA!
+TROCA NAO REALIZADA!
+TROCA NAO REALIZADA!
+TROCA REALIZADA!
+TROCA REALIZADA!
+TROCA REALIZADA!
+TROCA NAO REALIZADA!
+TROCA REALIZADA!
+TROCA NAO REALIZADA!
+JOAO CONSEGUIU AS CARTAS DESEJADAS!
+</code></pre>
+<h2>
+<a id="user-content-código-base" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/09/enunciado.html#c%C3%B3digo-base" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Código Base</h2>
+<p>No arquivo auxiliar lab09.py você irá encontrar um código base para dar início ao processo de elaboração dessa tarefa.</p>
+<h2>
+<a id="user-content-orientações" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/09/enunciado.html#orienta%C3%A7%C3%B5es" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Orientações</h2>
+<ul>
+<li>Veja <a href="https://susy.ic.unicamp.br:9999/mc102multi/09">aqui</a> a página de submissão da tarefa.</li>
+<li>O arquivo a ser submetido deve se chamar lab09.py.</li>
+<li>No link "Arquivos auxiliares" há um arquivo compactado (aux09.zip) que contém todos os arquivos de testes abertos (entradas e saídas esperadas).</li>
+<li>O laboratório é composto de 10 testes abertos e 10 testes fechados.</li>
+<li>O limite máximo será de 20 submissões.</li>
+<li>Acesse o sistema SuSy com seu RA (apenas números) e a senha que você utiliza para fazer acesso ao sistema da DAC.</li>
+<li>Você deve seguir as instruções de submissão descritas no enunciado.</li>
+<li>Serão considerados apenas os resultados da última submissão.</li>
+<li>Esta tarefa tem peso 2.</li>
+<li>O prazo final para submissão é dia 06/06/2021 (domingo).</li>
+</ul>
+
+    </article>
+
+
+</body></html>

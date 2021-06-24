@@ -1,6 +1,3 @@
-import colorama #O WINDOWS N SUPORTA A SEQUÊNCIA (ANSI).
-colorama.init()
-
 #EXEMPLOS:
 print('\033[33;41mHello World!\033[m ')
 print('\033[31;43mHello World!\033[m ')
@@ -25,7 +22,7 @@ print(f'Muito prazer em te conhecer, {cores["vermelha"]}{nome}{cores["limpa"]}. 
 print(f'Muito prazer em te conhecer, {cores["pretoebranco"]}{nome}{cores["limpa"]}')
 
 #CASOS PECULIARES
-      #FOREGROUND(LETRA)/BACKGROUND(FUNDO):
+#FOREGROUND(LETRA)/BACKGROUND(FUNDO):
 '\033[30;40m'      # black/black
 '\033[31;40m'      # red/red
 '\033[32;40m'     # green/green

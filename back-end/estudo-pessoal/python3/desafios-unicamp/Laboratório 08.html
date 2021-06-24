@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://susy.ic.unicamp.br:9999/mc102multi/08/enunciado.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Laboratório 08</title>        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./Laboratório 08_files/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./Laboratório 08_files/github-markdown.css">
+    <style>
+        .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+        font-family: 'Noto Sans', sans-serif;
+        }
+        .markdown-body h6 { margin-bottom: 0; }
+        .markdown-body h6 + ul li {
+        display: inline-block;
+        width: 100%;
+        max-width: 426px;
+        vertical-align: top;
+        }
+        .markdown-body h6 + ul li pre {
+          max-height: 400px;
+        }
+    </style>
+<style type="text/css"></style></head>
+<body cz-shortcut-listen="true">
+    <article class="markdown-body">
+<h1>
+<a id="user-content-o-desafio-da-palavra-escondida" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/08/enunciado.html#o-desafio-da-palavra-escondida" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>O Desafio da Palavra Escondida</h1>
+<p>O desafio da palavra escondida é a nova diversão entre os estudantes da Unicamp. Nesse jogo, o jogador deve dizer se uma determinada palavra está contida em um texto. Porém, para deixar o jogo mais interessante, algumas regras devem ser seguidas:</p>
+<ul>
+<li>Cada palavra do texto deverá conter no máximo uma letra da palavra buscada</li>
+<li>As letras da palavra buscada deverão ser buscadas sequencialmente, ou seja, iniciando da primeira e terminando na última letra</li>
+<li>As palavras do texto serão verificadas sequencialmente apenas uma única vez</li>
+</ul>
+<p>Por exemplo, considere o seguinte texto:</p>
+<pre><code>pEnSo, LoGo ExIsTo
+</code></pre>
+<p>Ao buscar pela palavra "oi", encontramos a letra "o" na primeira palavra, quinta posição ("o" da palavra "pEnSo") e depois encontramos a letra "i" na terceira palavra, terceira posição ("I" da palavra "ExIsTo"). Note que uma letra será considera encontrada independente se ela aparecer em maiúscula ou minúscula no texto.</p>
+<p>Como você não quer perder nenhum jogo, resolveu criar um programa que, a partir de um texto e de uma palavra buscada, determine as posições de cada uma das letras da palavra buscada no texto, caso seja possível encontrar a palavra no texto, seguindo as regras do desafio.</p>
+<p>Como entrada, seu programa receberá um número inteiro <em><strong>L</strong></em>, indicando a quantidade de linhas do texto, seguido das <em><strong>L</strong></em> linhas do texto. Por último, seu programa receberá a palavra a ser buscada no texto. A palavra buscada será fornecida em letras minúsculas.</p>
+<p>Como saída, se todas as letras da palavra buscada forem encontradas, o seu programa deverá imprimir a mensagem <code>Palavra encontrada</code>. Caso contrário, deverá imprimir <code>Palavra nao encontrada</code>. Além disso, caso a palavra for encontrada, seu programa deve fornecer, para cada letra da palavra buscada, a posição da palavra no texto e posição da letra nesta palavra onde ela foi encontrada.</p>
+<p>Você pode assumir que as pontuações utilizadas no texto estão restritas ao conjunto {".", ",", ":", ";", "!", "?"}.</p>
+<p>Exemplos de entradas e saídas esperadas pelo seu programa:</p>
+<h3>
+<a id="user-content-teste-01" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/08/enunciado.html#teste-01" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 01</h3>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/08/dados/arq01.in">Entrada</a></p>
+<pre><code>8
+Poeminho do contra
+
+Todos esses que ai estao
+Atravancando meu caminho,
+Eles passarao...
+Eu passarinho!
+
+Mario Quintana
+mercado
+</code></pre>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/08/dados/arq01.out">Saída</a></p>
+<pre><code>Palavra nao encontrada
+</code></pre>
+<h3>
+<a id="user-content-teste-06" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/08/enunciado.html#teste-06" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 06</h3>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/08/dados/arq06.in">Entrada</a></p>
+<pre><code>8
+Poeminho do contra
+
+Todos esses que ai estao
+Atravancando meu caminho,
+Eles passarao...
+Eu passarinho!
+
+Mario Quintana
+marca
+</code></pre>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/08/dados/arq06.out">Saída</a></p>
+<pre><code>Palavra encontrada
+m: palavra 1, letra 4
+a: palavra 3, letra 6
+r: palavra 9, letra 3
+c: palavra 11, letra 1
+a: palavra 13, letra 2
+</code></pre>
+<h3>
+<a id="user-content-teste-04" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/08/enunciado.html#teste-04" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 04</h3>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/08/dados/arq04.in">Entrada</a></p>
+<pre><code>1
+pEnSo, LoGo ExIsTo
+casa
+</code></pre>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/08/dados/arq04.out">Saída</a></p>
+<pre><code>Palavra nao encontrada
+</code></pre>
+<h3>
+<a id="user-content-teste-09" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/08/enunciado.html#teste-09" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 09</h3>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/08/dados/arq09.in">Entrada</a></p>
+<pre><code>1
+pEnSo, LoGo ExIsTo
+oi
+</code></pre>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/08/dados/arq09.out">Saída</a></p>
+<pre><code>Palavra encontrada
+o: palavra 1, letra 5
+i: palavra 3, letra 3
+</code></pre>
+<h2>
+<a id="user-content-código-base" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/08/enunciado.html#c%C3%B3digo-base" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Código Base</h2>
+<p>No arquivo auxiliar lab08.py você irá encontrar um código base para dar início ao processo de elaboração deste laboratório.</p>
+<h2>
+<a id="user-content-orientações" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/08/enunciado.html#orienta%C3%A7%C3%B5es" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Orientações</h2>
+<ul>
+<li>Veja <a href="https://susy.ic.unicamp.br:9999/mc102multi/08">aqui</a> a página de submissão da tarefa.</li>
+<li>O arquivo a ser submetido deve se chamar lab08.py.</li>
+<li>No link "Arquivos auxiliares" há um arquivo compactado (aux08.zip) que contém todos os arquivos de testes abertos (entradas e saídas esperadas).</li>
+<li>O laboratório é composto de 10 testes abertos e 10 testes fechados.</li>
+<li>O limite máximo será de 20 submissões.</li>
+<li>Acesse o sistema SuSy com seu RA (apenas números) e a senha que você utiliza para fazer acesso ao sistema da DAC.</li>
+<li>Você deve seguir as instruções de submissão descritas no enunciado.</li>
+<li>Serão considerados apenas os resultados da última submissão.</li>
+<li>Esta tarefa tem peso 2.</li>
+<li>O prazo final para submissão é dia 30/05/2021 (domingo).</li>
+</ul>
+
+    </article>
+
+
+</body></html>

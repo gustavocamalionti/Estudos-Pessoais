@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://susy.ic.unicamp.br:9999/mc102multi/10/enunciado.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Laboratório 10</title>        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./Laboratório 10_files/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./Laboratório 10_files/github-markdown.css">
+    <style>
+        .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+        font-family: 'Noto Sans', sans-serif;
+        }
+        .markdown-body h6 { margin-bottom: 0; }
+        .markdown-body h6 + ul li {
+        display: inline-block;
+        width: 100%;
+        max-width: 426px;
+        vertical-align: top;
+        }
+        .markdown-body h6 + ul li pre {
+          max-height: 400px;
+        }
+    </style>
+<style type="text/css"></style></head>
+<body cz-shortcut-listen="true">
+    <article class="markdown-body">
+<h1>
+<a id="user-content-caça-ao-tesouro" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/10/enunciado.html#ca%C3%A7a-ao-tesouro" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Caça ao Tesouro</h1>
+<p>Você encontrou um mapa do tesouro. Depois de seguir todas as pistas e instruções desse mapa, você chegou na região final demarcada no mapa. Contudo, esse mapa não marca as coordenadas precisas de onde os baús de tesouro estão enterrados, e você terá que explorar essa região em busca desses baús. Para agilizar essa exploração, você comprou um drone que é capaz de espalhar sensores sobre o campo. Esses sensores conseguem explorar a região onde pousam, além de regiões nas quatro direções (norte, sul, leste, oeste), e identificar se existe um baú enterrado naquela região.</p>
+<p>Antes de espalhar os sensores, você decide executar algumas simulações em seu computador. Nessa simulação, você espalha todos os sensores sobre o campo e verifica se algum deles encontra o tesouro. Nessa primeira fase, você também decide dividir o campo em 64 regiões dispostas em um formato de matriz <code>8 x 8</code>. Cada simulação deve estar preparada para testar sensores com diferentes alcances. O alcance de um sensor é medido em número de regiões que ele consegue escanear nas direções norte, sul, leste e oeste.</p>
+<p>Um detalhe importante sobre os sensores, é que eles não funcionam em certas regiões, chamadas de zonas mortas. Se o sensor encontra uma zona morta em uma das direções, essa zona vira uma barreira e o sensor não consegue escanear regiões além da zona morta.</p>
+<p>Você decide começar com um programa simples, que recebe como entrada uma possível configuração do campo a ser explorado (isto é, uma matriz <code>8 x 8</code>), um número <em>n</em> de sensores, o alcance desses sensores, e uma sequência de <em>n</em> coordenadas (linha e coluna) indicando a região do campo onde os sensores pousarão. Formato da entrada:</p>
+<pre><code>&lt;linha 1&gt;
+&lt;linha 2&gt;
+&lt;linha 3&gt;
+&lt;linha 4&gt;
+&lt;linha 5&gt;
+&lt;linha 6&gt;
+&lt;linha 7&gt;
+&lt;linha 8&gt;
+&lt;numero n de sensores&gt;
+&lt;alcance dos sensores&gt;
+&lt;posição do sensor 1&gt;
+...
+&lt;posição do sensor n&gt;
+</code></pre>
+<p>Na entrada do seu programa, cada região do campo estará marcada com uma das três opções a seguir:</p>
+<ul>
+<li>
+<code>.</code> indica uma região que pode ser escaneada pelo sensor, mas que não contém um baú de tesouro;</li>
+<li>
+<code>x</code> indica uma região que pode ser escaneada pelo sensor e contém um baú de tesouro;</li>
+<li>
+<code>o</code> indica uma zona morta, isto é, ao encontrar essa região o sensor não pode continuar escaneando nessa direção.</li>
+</ul>
+<p>As posições dos sensores consistem em dois números inteiros (cada um deles, entre 0 e 7). O alcance dos sensores também é um número inteiro, que indica quantas regiões do campo o sensor consegue explorar. Seu programa deverá ler a entrada no formato especificado. Em seguida, para cada sensor, seu programa deve simular o comportamento do mesmo, isto é, analisar as regiões que o sensor alcança e contabilizar os baús achados. Um mesmo baú pode ser encontrado por mais de um sensor, mas deve ser contado apenas uma vez.</p>
+<p>Depois de processar todos os sensores, seu programa deve imprimir quantos baús foram encontrados. Caso não tenham sido encontrados baús, a seguinte mensagem deve ser apresentada:</p>
+<pre><code>Nenhum bau encontrado.
+</code></pre>
+<p>Caso pelo menos um baú tenha sido encontrado, a seguinte mensagen devem ser exibida (note que <code>&lt;N&gt;</code> deve ser substituído pelo número de baús encontrados):</p>
+<pre><code>&lt;N&gt; bau(s) encontrado(s).
+</code></pre>
+
+<p>Exemplos de entradas e saídas esperadas pelo seu programa:</p>
+<h3>
+<a id="user-content-teste-01" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/10/enunciado.html#teste-01" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 01</h3>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/10/dados/arq01.in">Entrada</a></p>
+<pre><code>. . . . . . . .
+. . . . . . . .
+. . . x . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+1
+2
+4 3
+</code></pre>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/10/dados/arq01.out">Saída</a></p>
+<pre><code>1 bau(s) encontrado(s).
+</code></pre>
+<h3>
+<a id="user-content-teste-03" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/10/enunciado.html#teste-03" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 03</h3>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/10/dados/arq03.in">Entrada</a></p>
+<pre><code>. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. x . . . . . .
+. . . . . . . .
+1
+3
+2 3
+</code></pre>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/10/dados/arq03.out">Saída</a></p>
+<pre><code>Nenhum bau encontrado.
+</code></pre>
+<h3>
+<a id="user-content-teste-08" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/10/enunciado.html#teste-08" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 08</h3>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/10/dados/arq08.in">Entrada</a></p>
+<pre><code>. . . . . . . .
+. . o . . . . .
+. o x o . . . .
+. . o . . . . .
+. . . . . . . .
+. x . . . x . .
+. . . . . . . .
+. . x . . . . .
+4
+2
+4 2
+2 4
+6 4
+5 5
+</code></pre>
+<p><a href="https://susy.ic.unicamp.br:9999/mc102multi/10/dados/arq08.out">Saída</a></p>
+<pre><code>1 bau(s) encontrado(s).
+</code></pre>
+<h2>
+<a id="user-content-código-base" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/10/enunciado.html#c%C3%B3digo-base" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Código Base</h2>
+<p>No arquivo auxiliar lab10.py você irá encontrar um código base para dar início ao processo de elaboração deste laboratório. Para facilitar a implementação do seu programa, o código base realiza a leitura dos dados do campo (representado por uma matriz <code>8 x 8</code>) e dos sensores:</p>
+<pre><code>campo = []
+for i in range(8):
+  campo.append(input().split())
+
+num_sensores = int(input())
+alcance = int(input())
+
+for i in range(num_sensores):
+  linha, coluna = [int(i) for i in input().split()]
+</code></pre>
+<h2>
+<a id="user-content-orientações" class="anchor" href="https://susy.ic.unicamp.br:9999/mc102multi/10/enunciado.html#orienta%C3%A7%C3%B5es" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Orientações</h2>
+<ul>
+<li>Veja <a href="https://susy.ic.unicamp.br:9999/mc102multi/10">aqui</a> a página de submissão da tarefa.</li>
+<li>O arquivo a ser submetido deve se chamar lab10.py.</li>
+<li>No link "Arquivos auxiliares" há um arquivo compactado (aux10.zip) que contém todos os arquivos de testes abertos (entradas e saídas esperadas).</li>
+<li>O laboratório é composto de 10 testes abertos e 10 testes fechados.</li>
+<li>O limite máximo será de 20 submissões.</li>
+<li>Acesse o sistema SuSy com seu RA (apenas números) e a senha que você utiliza para fazer acesso ao sistema da DAC.</li>
+<li>Você deve seguir as instruções de submissão descritas no enunciado.</li>
+<li>Serão considerados apenas os resultados da última submissão.</li>
+<li>Esta tarefa tem peso 3.</li>
+<li>O prazo final para submissão é dia 13/06/2021 (domingo).</li>
+</ul>
+
+    </article>
+
+
+</body></html>
