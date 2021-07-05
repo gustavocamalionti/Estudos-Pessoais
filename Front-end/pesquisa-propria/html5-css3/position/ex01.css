@@ -15,4 +15,6 @@
     width: 200px;
     height: 200px;
     background-color: rgb(139, 185, 139);
+    right:-1px;
+    bottom:-1px;
 }
