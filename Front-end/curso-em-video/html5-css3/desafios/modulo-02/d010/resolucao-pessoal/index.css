@@ -1,5 +1,28 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'idroid';
+    src: url('/Front-end/curso-em-video/html5-css3/desafios/modulo-02/d010/arquivos/fontes/idroid.otf') format('opentype');
+}
+
+.links-externos { 
+    color: rgb(17, 107, 5);
+    font-weight: bolder;
+    
+    text-decoration: none;
+}
+
+.links-internos {
+    color: rgb(17, 107, 5);
+    font-weight: bolder;
+    
+    text-decoration: none;
+}
+
+.links-externos::after {
+    content: " 🔗";
+}
+
 body {
     background-color: rgb(113, 221, 167);
     font-family: Arial, Helvetica, sans-serif;
@@ -13,11 +36,14 @@ p {
 
 .header-principal{
     background-image: linear-gradient(rgb(86, 211, 142), rgb(31, 119, 68));
+
+    padding-top: 20px;
 }
 
 .header-principal p {
     text-align: center;
-    
+    color: white;
+
     padding-bottom: 15px;
     margin-bottom: 0px;
 }
@@ -27,6 +53,8 @@ nav {
     position: sticky;
     top:0px;
     z-index: 1;
+
+    color: white;
 }
 
 nav ul {
@@ -46,6 +74,10 @@ nav ul li {
 
     margin-right: 130px;
     margin-left: 130px;
+    margin-bottom: 15px;
+
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 128, 0, 0.315);
 
     padding-top: 10px;
     padding-right: 15px;
@@ -59,18 +91,26 @@ h1 {
     text-align: center;
     text-transform: uppercase;
 
+    color: white;
+
     padding-top: 15px;
-    margin-top: 0;
+    margin-top: 0px;
     margin-right: 10px;
     margin-left: 10px;
 }
 
-h3 {
-    background-image: linear-gradient(to right, rgb(121, 207, 157), rgb(220, 247, 207));
+h2 {
+    font-family: 'idroid', sans-serif;
+    font-size: 3em;
+    color: rgb(17, 107, 5);
 }
 
-.aprender-mais {
-    background-color: rgb(86, 211, 100);
+h3 {
+    background-image: linear-gradient(to right, rgba(121, 207, 157, 0.521), rgba(220, 247, 207, 0));
+
+    font-family: 'idroid', sans-serif;
+    font-size: 2em;
+    color: rgb(17, 107, 5);
 }
 
 img {
@@ -80,9 +120,22 @@ img {
 
 #bugdroid {
     position: relative;
-    width:50%;
+    width:45%;
     right:-25%;
     z-index: 0;
+}
+
+.video {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(6, 95, 6);
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 0px 15px -15px;
+
 }
 
 #aprender-mais {
@@ -126,14 +179,35 @@ article ul {
     padding-left: 10%
 }
 
+
 footer {
     background-color: rgb(35, 134, 54);
 }
 
-
-bottom {
+#chat {
+    text-align: center;
     position: fixed;
-    right: 0;
     bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    font-size: 45px;
+    border-radius: 15px;
+    background-color: rgb(30, 107, 36);
+    margin: 1.5% 1%;
+
+    padding-bottom: 10px;
 }
+
+#chat:active {
+    border-width: 5px;
+    border-color: #BBBBBB;
+}
+
+#chat:hover {
+    background-color: rgb(100, 148, 28);
+}
+
+
+
 
