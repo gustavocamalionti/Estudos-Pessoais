@@ -5,6 +5,11 @@
     src: url('/Front-end/curso-em-video/html5-css3/desafios/modulo-02/d010/arquivos/fontes/idroid.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'bebas';
+    src: url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+}
+
 .links-externos { 
     color: rgb(17, 107, 5);
     font-weight: bolder;
@@ -92,6 +97,7 @@ h1 {
     text-transform: uppercase;
 
     color: white;
+    font-family: 'bebas', cursive;
 
     padding-top: 15px;
     margin-top: 0px;
