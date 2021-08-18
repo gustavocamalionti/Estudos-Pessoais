@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/*CABEÇALHO*/
+header {
+	background: #BBBBBB;
+	padding: 20px 0;
+}
+
+.caixa {
+	position: relative;
+	margin: 0 7%;
+}
+
+nav {
+	top: 110px;
+	left: 0;
+}
+
+nav a {
+	display: inline;
+	margin: 0 0 0 15px;
+	text-transform:uppercase;
+}
+
+p {
+	text-align: justify;
+}
+nav ul {
+    width: 100%;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+
+
+/*RODAPÉ*/
+footer {
+	text-align: center;
+	background: url("imagens/bg.jpg");
+	padding: 40px 0;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+/*BUTTOM - CHAT*/
+#fale-conosco {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    font-size: 70px;
+    border-radius: 15px;
+    background-color: rgb(94, 95, 97);
+    margin: 1% 1%;
+}
+
+#fale-conosco:active {
+    border-width: 5px;
+    border-color: #BBBBBB;
+}
+
+#fale-conosco:hover {
+    background-color: rgb(100, 148, 28);
+}
+
