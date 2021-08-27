@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+table {
+    border-width: 3px;
+    width: 500px;
+}
+
+tbody img {
+    width: 60px;
+}
+
+thead {
+    background-color: rgb(103, 175, 93);
+    color: white;
+}
+
+tbody {
+    background-color: rgb(179, 250, 185);
+    text-align: center;
+}
+
+tfoot {
+    background-color:rgb(103, 175, 93);
+    color: white;
+    text-Align: center;
+}
+
+caption {
+    font-size:32px;
+    background-color: rgb(103, 175, 93);
+    color: white;
+}
+
+#G4 {
+    font-size:32px;
+}

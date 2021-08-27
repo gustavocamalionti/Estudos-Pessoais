@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Fale Conosco</title>
+    <link rel="shortcut icon" href="imagens/faviconoculos.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/fale-conosco.css">
+</head>
+<body>
+    <form action="" method="get" id="contato">
+        <fieldset>
+            <legend>Fale Conosco</legend>
+            <table>
+                <thead>
+                    <tr>
+                        <caption colspan = "2">Deseja receber novidades, promoções, curiosidades e dicas toda semana? Preencha o formulário abaixo: </caption>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><label class="label-campo-text" for="area-interesse">Área de Interesse</label></td>
+                        <td colspan="2" id = "drop-box">
+                            <select name="area-interesse" id="area-interesse">
+                                <option value="machine-learning">Machine Learning</option>
+                                <option value="">Inteligência Artificial</option>
+                                <option value="">Big Data</option>
+                                <option value="">Desenvolvedor Web</option>
+                                <option value="">Redes de Computadores</option>
+                            </select>
+                        </td>
+                        <td><img src="imagens/" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="linguagens-interesse">Linguagens</label></th>
+                        <td><input type= "checkbox" id="python" name="python" value="python"><label class="label-campo-checkbox" for="python">Python</label></td>
+                        <td><input type= "checkbox" id="php" name="php" value="php"><label class="label-campo-checkbox" for="php">PHP</label></d>
+                    </tr>
+
+                    <tr>
+                        <td><label class="label-campo-text" for="nome" >Seu Nome</label></td>
+                        <td colspan="2"><input type="text" id="nome" maxlength="50" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label class="label-campo-text" for="email">Seu Email</label></td>
+                        <td colspan="2"><input type="email" id="email"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label class="label-campo-text" for="sexo">Sexo</label></td>
+                        
+                        <td>
+                            <input type="radio" id="masculino" name="sexo" value="masculino">
+                            <label for="masculino">Masculino</label> 
+                        </td>
+
+                        <td>
+                            <input type= "radio" id="feminino" name="sexo" value="feminino"> 
+                            <label for="feminino">Feminino</label>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Enviar"></td>
+                        <td><input type= "reset" value="Limpar"></td>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        </fieldset>
+
+    </form>
+    <a href="index.html">Voltar</a>
+</body>
+</html>
