@@ -3,6 +3,25 @@
 fieldset {
     display:inline
 }
+
+form {
+    position: absolute;
+    background-color: #628ABE;
+    right: 50%;
+    top: 50%;
+    transform: translateX(50%) translateY(-50%);
+
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+}
+
+legend {
+    font-weight:bolder;
+    color: black;
+}
+
 table {
     border-width: 3px;
     width: 500px;
@@ -15,7 +34,7 @@ table {
 
 .label-campo-checkbox {
     margin-left: 10px;
-    
+    text-transform: capitalize;
 }
 
 tbody input {
@@ -33,3 +52,11 @@ input, select {
     width: 100%;
 }
 
+button {
+    text-transform: uppercase;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-size: larger;
+
+}
