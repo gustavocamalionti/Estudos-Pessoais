@@ -1,0 +1,7 @@
+Man: Olá, meu nome é Binas
+Other-Man: Muito prazer! me chamo Gustavo
+Man: Sua vida está agradável?
+Other Man: Sim, tudo favorável.
+Man: Então beleza, boa noite
+Other-Man: Boa noite Binas, até amanhã! 
+Man: Até.

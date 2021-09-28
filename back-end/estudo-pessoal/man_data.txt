@@ -1,0 +1,1 @@
+['Olá, meu nome é Binas', 'Sua vida está agradável?', 'Sim, tudo favorável.', 'Então beleza, boa noite', 'Até.']

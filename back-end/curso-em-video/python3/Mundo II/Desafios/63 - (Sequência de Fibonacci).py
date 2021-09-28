@@ -3,7 +3,11 @@
 print('-'*30)
 print('Sequência de Fibonnaci')
 print('-'*30)
-n = int(input('Quer mostrar quantos termos da sequência? '))
+n = 0
+while n<2:
+    n = int(input('Quer mostrar quantos termos da sequência? '))
+    if n<2:
+        print('Por favor, digite um número maior ou igual a 2')
 
 c = 1
 t1 = 0
