@@ -26,8 +26,13 @@
     <p>Já me livrei da maldição</p>
 
     <script>
-        var nome = window.prompt('Qual é o seu nome?'); //  Comentário em Javascript
-        window.alert('É um grande prazer em te conhecer,' + nome + '!') // Concatenação
+        var n1 = Number.parseInt(window.prompt('Digite um número: ')) //Recebe um valor string
+        var n2 = Number.parseInt(window.prompt('Digite outro número: ')) //Recebe um valor string
+        var s = n1 + n2
+        window.alert('Concatenação Clássica e alert: A soma entre ' + n1 + ' e ' + n2 + ' é igual a ' + s + '.') // Concatenação
+        window.confirm(`PlaceHolder e confirm: A soma entre ${n1} e ${n2} é igual a ${s}?`) // Placeholder ${}
+        // (number + number) para adição
+        // (string + string) para Concatenação
     </script>
 </body>
 </html>
