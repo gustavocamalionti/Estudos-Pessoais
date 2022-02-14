@@ -31,8 +31,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
   <component name="RunManager">
-    <configuration name="Exercicio01Aliquota" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercicio01Aliquota" />
+    <configuration name="Exercicio02SwitchMes" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercicio02SwitchMes" />
       <module name="Condicional" />
       <method v="2">
         <option name="Make" enabled="true" />
