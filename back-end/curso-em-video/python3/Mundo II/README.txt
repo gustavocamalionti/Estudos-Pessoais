@@ -1,1 +1,0 @@
-Segundo mundo do curso explica as estruturas de repetição, conceitos e usabilidades.
