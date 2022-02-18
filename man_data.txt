@@ -1,1 +1,0 @@
-['Muito prazer! me chamo Gustavo', 'Sim, tudo favorável.', 'Boa noite Binas, até amanhã!']
