@@ -14,7 +14,12 @@ public class Conta {
         int agencia = 1; //Por ter definido o valor da agencia, o default dela passa a ser 1 (antes era zero).
         int numero;
         String titular;
+
+        public void deposita(double valor) {  //void deposita(double valor) / por causa do void, não haverá nenhum retorno como resposta
+                this.saldo = this.saldo + valor;
+        }
 }
 
+//para chamar um método basta escrever: nomeDaReferencia.nomeDoMetodo();
 //Apartir desse esquema acima, podemos contruir quantas contas quiser (quantos objetos/instância quiser).
 
