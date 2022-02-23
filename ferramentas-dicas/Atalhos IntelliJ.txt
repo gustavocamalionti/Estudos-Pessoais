@@ -1,2 +1,3 @@
 psvm - (public static void main(String[] args){}
 sout - (System.out.println("")
+Segurar o ctrl para navegar pelos métodos em diferentes arquivos
