@@ -5,3 +5,7 @@ sout - (System.out.println("")
 Segurar o ctrl para navegar pelos métodos em diferentes arquivos
 
 botao direito no método, refactor, rename >>> Funciona semelhante ao substituir
+
+outline in intelliJ: Tool Windows | Structure. Press Alt+7. Press Ctrl+F12
+
+gerar getters e setters : (seleciona os atributos) Code / Generate / Getters and Setters
