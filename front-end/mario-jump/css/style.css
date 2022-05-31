@@ -1,0 +1,10 @@
+* {
+    margin: 0 0;
+    box-sizing: border-box;
+}
+
+.gaming-box {
+    width: 940;
+    margin: 0 auto;
+    border: 3px black;
+}
