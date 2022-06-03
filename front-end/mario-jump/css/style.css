@@ -13,7 +13,6 @@
     border: 3px solid rgb(26, 25, 25);
     position:relative;
     overflow:hidden;
-
 }
 
 .clounds {
@@ -21,7 +20,7 @@
     width: 700px;
     right:0;
     top:75px;
-    animation: clounds-animation 15s infinite;
+    animation: clounds-animation 12s infinite linear;
 }
 
 .pipe {
