@@ -4,13 +4,24 @@
     box-sizing: border-box;
 }
 
+
 .game-board {
     width: 80%;
     height: 800px;
     margin: 0 auto;
+    background: linear-gradient( rgb(167, 206, 238), white);
     border: 3px solid rgb(26, 25, 25);
     position:relative;
     overflow:hidden;
+
+}
+
+.clounds {
+    position:absolute;
+    width: 700px;
+    right:0;
+    top:75px;
+    animation: clounds-animation 15s infinite;
 }
 
 .pipe {
@@ -26,6 +37,22 @@
     width:150px;
     bottom:0;
     animation: jump 500ms infinite ease-out;
+}
+    /*animation: jump 500ms infinite ease-out;*/
+
+
+.jump {
+        animation: jump 500ms ease-out;
+}
+
+@keyframes clounds-animation {
+    from {
+        right:-700px;
+    }
+
+    to {
+        right:100%;
+    }
 }
 
 @keyframes pipe-animation {
