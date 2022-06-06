@@ -35,7 +35,6 @@
     position:absolute;
     width:150px;
     bottom:0;
-    animation: jump 500ms infinite ease-out;
 }
     /*animation: jump 500ms infinite ease-out;*/
 
