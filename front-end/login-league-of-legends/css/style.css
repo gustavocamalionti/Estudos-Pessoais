@@ -78,3 +78,66 @@
     font-size: 0.7em;
     margin: 8px 10px;
 }
+
+.login_icons {
+    display:flex;
+    gap:10px;
+    width:100%;
+    margin-top:20px;
+}
+
+.login_icons img {
+    width: 20px;
+}
+
+.icons_button {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    border-radius:5px;
+    border: none;
+}
+
+.login_icons .icons_button:nth-child(1) {
+    background-color: var(--blue);
+}
+
+.login_icons .icons_button:nth-child(3) {
+    background-color: var(--light-grey);
+}
+
+.login_icons .icons_button:nth-child(3) {
+    background-color: var(--black);
+}
+
+.login_label--checkbox {
+    width:100%;
+    margin: 15px 0 50px;
+    font-size: 0.9em;
+    display:flex;
+}
+
+.input--checkbox {
+    appearance: none;
+    width: 20px;
+    height:20px;
+    background-color: var(--light-grey);
+    margin-right: 8px;
+    border-radius: 3px;
+
+}
+
+.input--checkbox:checked {
+    background-color: var(--red);
+}
+
+.input--checkbox:checked::after {
+    content: "";
+    display:block;
+    width:5px;
+    height:10px;
+    border: 3px solid green ;
+    margin:100px;
+}
