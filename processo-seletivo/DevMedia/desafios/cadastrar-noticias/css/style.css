@@ -1,0 +1,43 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+header {
+    background-color: rgba(51, 56, 61, 0.459);
+}
+
+header h1 {
+    display: inline;
+    float:
+}
+
+#logo-header{
+    width:70px;
+}
+
+nav {
+    display:inline-block;
+}
+
+#container-busca {
+    background-color:red;
+    height:25px;
+    right:0;
+    display:flex;
+    border-radius:5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+#container-busca a {
+    display:absolute;
+    width:100%;
+}
+
+
+
+
